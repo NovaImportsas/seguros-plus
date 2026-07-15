@@ -23,8 +23,8 @@ nav{display:flex;align-items:center;justify-content:space-between;height:72px}
 .logo{display:flex;align-items:center;gap:10px;color:var(--white);font-weight:800;font-size:1.3rem;font-style:italic;letter-spacing:.01em}
 .logo .plus{color:var(--lime)}
 .logo svg{width:36px;height:36px;flex:none}
-.logo-text{display:flex;flex-direction:column;line-height:1}
-.logo-text small{font-size:.48rem;letter-spacing:.3em;color:rgba(255,255,255,.75);font-weight:600;font-style:normal;margin-top:4px;border-top:1px solid rgba(201,242,75,.5);padding-top:3px}
+.logo-text{display:inline-block;line-height:1;white-space:nowrap}
+.logo-text small{display:block;font-size:.48rem;letter-spacing:.3em;color:rgba(255,255,255,.75);font-weight:600;font-style:normal;margin-top:4px;border-top:1px solid rgba(201,242,75,.5);padding-top:3px}
 .nav-links{display:flex;gap:28px;list-style:none}
 .nav-links a{color:rgba(255,255,255,.75);font-size:.92rem;font-weight:500;transition:color .2s}
 .nav-links a:hover,.nav-links a.active{color:var(--lime)}
