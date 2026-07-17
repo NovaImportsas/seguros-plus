@@ -357,3 +357,28 @@ footer ul a:hover{color:var(--lime)}
 /* ---------- REVEAL ---------- */
 .reveal{opacity:0;transform:translateY(26px);transition:opacity .65s ease, transform .65s ease}
 .reveal.in{opacity:1;transform:none}
+
+/* ---------- PAGE HERO DINAMICO ---------- */
+.page-hero{overflow:visible}
+.page-hero::after{content:'';position:absolute;inset:0;background:radial-gradient(650px 380px at 82% 10%,rgba(201,242,75,.13),transparent 65%);pointer-events:none}
+.page-hero .container{position:relative;z-index:1}
+.ph-media{position:relative;display:flex;align-items:center;justify-content:center;min-height:400px}
+.ph-media img{width:min(350px,80%);aspect-ratio:1/1;border-radius:50%;object-fit:cover;position:relative;z-index:2;box-shadow:0 30px 80px rgba(0,0,0,.45);height:auto}
+.ph-media .hs-ring{width:min(410px,92%)}
+.ph-media .hs-blob{width:min(440px,98%)}
+.ph-media .hs-chip{bottom:30px;left:4%}
+.ph-text>*{animation:hsup .6s both}
+.ph-text>*:nth-child(2){animation-delay:.1s}
+.ph-text>*:nth-child(3){animation-delay:.2s}
+.ph-text>*:nth-child(4){animation-delay:.3s}
+@media(max-width:900px){
+  .ph-media{min-height:300px}
+  .ph-media img{width:min(250px,70%)}
+  .ph-media .hs-ring{width:min(295px,82%)}
+  .ph-media .hs-blob{width:min(320px,88%)}
+  .ph-media .hs-chip{bottom:8px;left:50%;transform:translateX(-50%);font-size:.78rem}
+}
+
+/* ---------- MARQUEE BAND ---------- */
+.marquee-band{background:var(--dark);padding:24px 0;border-top:1px solid var(--stroke);border-bottom:1px solid var(--stroke)}
+.marquee-band .chip{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.1);color:var(--white)}

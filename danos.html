@@ -34,7 +34,7 @@
 
 <section class="page-hero">
   <div class="container page-hero-grid">
-    <div>
+    <div class="ph-text">
       <p class="breadcrumb"><a href="index.html">Inicio</a> / Seguros de Daños</p>
       <h1>Tu patrimonio y tu operación, <em>siempre protegidos</em></h1>
       <p class="lead">Los seguros de daños protegen tus bienes, tu vehículo, tu empresa y tu patrimonio frente a eventos súbitos, accidentales e imprevistos.</p>
@@ -43,7 +43,7 @@
         <a class="btn btn-outline" href="https://wa.me/573174273388?text=Hola%2C%20quiero%20asesor%C3%ADa%20sobre%20Seguros%20de%20Da%C3%B1os" target="_blank" rel="noopener">Asesoría por WhatsApp</a>
       </div>
     </div>
-    <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=1200&q=70" alt="Protección de patrimonio - Seguros de Daños" />
+    <div class="ph-media"><span class="hs-ring"></span><span class="hs-blob"></span><img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=1200&q=70" alt="Protección de patrimonio - Seguros de Daños" /><span class="hs-chip">🚗 Ahorra hasta un 25%</span></div>
   </div>
 </section>
 
@@ -646,6 +646,10 @@
   </div>
 </section>
 
+<div class="marquee-band">
+  <div class="marquee"><div class="marquee-track"><span class="chip">Sura</span><span class="chip">Bolívar</span><span class="chip">Mapfre</span><span class="chip">Estado</span><span class="chip">Colpatria</span><span class="chip">Qualitas</span><span class="chip">HDI</span><span class="chip">Allianz</span><span class="chip">SBS</span><span class="chip">Previsora</span><span class="chip">Mundial</span><span class="chip">Solidaria</span><span class="chip">Equidad</span><span class="chip">Zurich</span><span class="chip">Terrawind · Asistencia en viajes</span><span class="chip">Assist Card · Asistencia en viajes</span><span class="chip">Sura</span><span class="chip">Bolívar</span><span class="chip">Mapfre</span><span class="chip">Estado</span><span class="chip">Colpatria</span><span class="chip">Qualitas</span><span class="chip">HDI</span><span class="chip">Allianz</span><span class="chip">SBS</span><span class="chip">Previsora</span><span class="chip">Mundial</span><span class="chip">Solidaria</span><span class="chip">Equidad</span><span class="chip">Zurich</span><span class="chip">Terrawind · Asistencia en viajes</span><span class="chip">Assist Card · Asistencia en viajes</span></div></div>
+</div>
+
 <section class="section dark-section" id="cotizar">
   <div class="container insurance">
     <div class="info">
@@ -764,6 +768,22 @@ document.querySelectorAll('.ramo-btn').forEach(function(b){
   });
 });
 
+
+// Autoplay del carrusel de ramos
+(function(){
+  var t = document.querySelector('.ramo-track');
+  if (!t) return;
+  var iv = setInterval(function(){
+    var max = t.scrollWidth - t.clientWidth;
+    if (t.scrollLeft >= max - 10) t.scrollTo({left:0, behavior:'smooth'});
+    else t.scrollBy({left: t.clientWidth, behavior:'smooth'});
+  }, 4600);
+  function stop(){ clearInterval(iv); }
+  ['mouseenter','touchstart','pointerdown'].forEach(function(e){ t.addEventListener(e, stop, {passive:true}); });
+  var wrap = t.closest('.carousel-wrap');
+  if (wrap) wrap.querySelectorAll('.car-btn').forEach(function(b){ b.addEventListener('click', stop); });
+  document.querySelectorAll('.ramo-btn').forEach(function(b){ b.addEventListener('click', stop); });
+})();
 document.querySelectorAll('.carousel-wrap').forEach(function(w){
   var t = w.querySelector('.ramo-track');
   w.querySelector('.prev').addEventListener('click', function(){ t.scrollBy({left:-t.clientWidth, behavior:'smooth'}); });

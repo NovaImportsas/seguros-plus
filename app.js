@@ -72,3 +72,24 @@ document.querySelectorAll('form[data-tipo]').forEach(form => {
   }, {threshold: .12});
   els.forEach(function(el){ el.classList.add('reveal'); io.observe(el); });
 })();
+
+
+// ====== Contadores animados ======
+(function(){
+  var cs = document.querySelectorAll('.count[data-to]');
+  if (!cs.length || !('IntersectionObserver' in window)) return;
+  var io = new IntersectionObserver(function(es){
+    es.forEach(function(e){
+      if (!e.isIntersecting) return;
+      io.unobserve(e.target);
+      var el = e.target, to = +el.dataset.to, st = performance.now();
+      (function tick(n){
+        var p = Math.min((n - st) / 1300, 1);
+        var ease = p < .5 ? 2*p*p : -1 + (4 - 2*p) * p;
+        el.textContent = Math.round(to * ease);
+        if (p < 1) requestAnimationFrame(tick);
+      })(st);
+    });
+  }, {threshold: .5});
+  cs.forEach(function(c){ io.observe(c); });
+})();
