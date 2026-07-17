@@ -202,3 +202,16 @@ footer ul a:hover{color:var(--lime)}
   .hero-badge{left:10px;bottom:-14px}
 }
 @media(max-width:520px){.form-grid{grid-template-columns:1fr}.why-grid{grid-template-columns:1fr}}
+
+/* ---------- DETALLE RAMOS + FAQ (paginas categoria) ---------- */
+.detalle details,.faq details{background:var(--white);border:1px solid #e7ebe2;border-radius:16px;padding:20px 24px;margin-bottom:14px;box-shadow:0 8px 24px rgba(11,31,23,.04)}
+.detalle summary,.faq summary{font-weight:800;cursor:pointer;font-size:1.05rem;color:var(--dark)}
+.detalle summary:hover,.faq summary:hover{color:#5a7a16}
+.detalle .d-body{margin-top:14px;color:var(--gray);font-size:.93rem}
+.detalle .d-body p{margin-bottom:4px}
+.detalle h4{font-size:.88rem;margin:16px 0 8px;color:var(--dark)}
+.detalle ul{margin:0 0 4px 20px}
+.detalle li{margin-bottom:5px}
+.faq details p{margin-top:10px;color:var(--gray);font-size:.92rem}
+@media(max-width:900px){.coverage-grid[style*="repeat(4"]{grid-template-columns:1fr 1fr !important}}
+@media(max-width:520px){.coverage-grid[style*="repeat(4"]{grid-template-columns:1fr !important}}
