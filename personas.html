@@ -95,7 +95,7 @@
         </button>
         <button class="ramo-card ramo-btn" data-ramo="viajes">
           <div class="rc-img"><img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=600&q=60" alt="Asistencia en viajes" loading="lazy" /><span class="rc-emoji">✈️</span></div>
-          <div class="rc-body"><h3>Asistencia en viajes</h3><p>Viaja tranquilo con Terrawin y Assist Card.</p><span class="ver">Ver info y cotizar →</span></div>
+          <div class="rc-body"><h3>Asistencia en viajes</h3><p>Viaja tranquilo con Terrawind y Assist Card.</p><span class="ver">Ver info y cotizar →</span></div>
         </button>
       </div>
       <button class="car-btn next" type="button" aria-label="Siguiente">›</button>
@@ -357,7 +357,7 @@
       <div class="ramo-detail-grid">
         <div class="ramo-info">
           <h3>✈️ Asistencia en viajes</h3>
-          <p class="d-intro">Con Terrawin y Assist Card: cobertura médica y asistencia completa cuando viajas por Colombia o el mundo. Es requisito para visa Schengen y la diferencia entre un susto y una deuda enorme en el exterior.</p>
+          <p class="d-intro">Con Terrawind y Assist Card: cobertura médica y asistencia completa cuando viajas por Colombia o el mundo. Es requisito para visa Schengen y la diferencia entre un susto y una deuda enorme en el exterior.</p>
           <h4>✅ ¿Qué cubre normalmente?</h4>
           <ul><li>Asistencia médica por enfermedad o accidente en el exterior</li><li>Medicamentos, hospitalización y odontología de urgencia</li><li>Cancelación e interrupción de viaje (según plan)</li><li>Pérdida de equipaje y demoras de vuelo</li><li>Repatriación sanitaria</li></ul>
           <h4>⚠️ Exclusiones frecuentes</h4>
@@ -506,6 +506,12 @@
 
 <script src="app.js"></script>
 <script>
+// Abre panel si viene con hash (ej. danos.html#autos)
+window.addEventListener('load', function(){
+  var h = location.hash.replace('#','');
+  var btn = h && document.querySelector('.ramo-btn[data-ramo="'+h+'"]');
+  if(btn) btn.click();
+});
 document.querySelectorAll('.ramo-btn').forEach(function(b){
   b.addEventListener('click', function(){
     var open = b.classList.contains('active');
@@ -525,6 +531,43 @@ document.querySelectorAll('.carousel-wrap').forEach(function(w){
   w.querySelector('.prev').addEventListener('click', function(){ t.scrollBy({left:-t.clientWidth, behavior:'smooth'}); });
   w.querySelector('.next').addEventListener('click', function(){ t.scrollBy({left: t.clientWidth, behavior:'smooth'}); });
 });
+</script>
+
+<!-- Popup promocional -->
+<div class="promo-pop" id="promoPop" hidden>
+  <div class="pp-card">
+    <button class="pp-close" id="ppClose" aria-label="Cerrar">✕</button>
+    <img id="ppImg" src="" alt="Seguro destacado" />
+    <div class="pp-body">
+      <span class="pb-tag" id="ppTag"></span>
+      <h3 id="ppTitle"></h3>
+      <p id="ppDesc"></p>
+      <a class="btn btn-lime" id="ppCta" href="#">Cotizar gratis →</a>
+    </div>
+  </div>
+</div>
+<script>
+(function(){
+  if (sessionStorage.getItem('gestionarPop')) return;
+  var promos = [
+    {tag:'🚗 El más pedido', title:'¡Todo Riesgo para tu Auto!', desc:'Protección total: daños, hurto, responsabilidad civil y asistencia en vía 24/7. Cotiza gratis con más de 15 aseguradoras.', img:'https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?auto=format&fit=crop&w=800&q=65', url:'danos.html#autos'},
+    {tag:'✈️ Con Terrawind y Assist Card', title:'¡Viaja tranquilo y protegido!', desc:'Asistencia médica en el exterior, cancelación de viaje y protección de equipaje. Requisito para visa Schengen.', img:'https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=800&q=65', url:'personas.html#viajes'},
+    {tag:'🚛 Para tu negocio', title:'Protege tu vehículo pesado', desc:'Tu camión o tractocamión es tu herramienta de trabajo. Daños, hurto, RC y asistencia en carretera especializada.', img:'https://images.unsplash.com/photo-1519003722824-194d4455a60c?auto=format&fit=crop&w=800&q=65', url:'danos.html#pesados'}
+  ];
+  var p = promos[Math.floor(Math.random()*promos.length)];
+  setTimeout(function(){
+    document.getElementById('ppTag').textContent = p.tag;
+    document.getElementById('ppTitle').textContent = p.title;
+    document.getElementById('ppDesc').textContent = p.desc;
+    document.getElementById('ppImg').src = p.img;
+    document.getElementById('ppCta').href = p.url;
+    var pop = document.getElementById('promoPop');
+    pop.hidden = false;
+    sessionStorage.setItem('gestionarPop','1');
+    document.getElementById('ppClose').addEventListener('click', function(){ pop.hidden = true; });
+    pop.addEventListener('click', function(e){ if(e.target===pop) pop.hidden = true; });
+  }, 4000);
+})();
 </script>
 </body>
 </html>
