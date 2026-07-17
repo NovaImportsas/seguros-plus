@@ -58,3 +58,17 @@ document.querySelectorAll('form[data-tipo]').forEach(form => {
     }
   });
 });
+
+
+// ====== Animaciones de aparición al hacer scroll ======
+(function(){
+  var sel = '.section-head, .promo-banner, .product-card, .coverage-card, .why-card, .stat-big, .step-card, .testimonial, .portfolio-card, .band-item, .photo-card';
+  var els = document.querySelectorAll(sel);
+  if (!('IntersectionObserver' in window)) return;
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+    });
+  }, {threshold: .12});
+  els.forEach(function(el){ el.classList.add('reveal'); io.observe(el); });
+})();
