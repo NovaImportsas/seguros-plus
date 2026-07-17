@@ -215,3 +215,21 @@ footer ul a:hover{color:var(--lime)}
 .faq details p{margin-top:10px;color:var(--gray);font-size:.92rem}
 @media(max-width:900px){.coverage-grid[style*="repeat(4"]{grid-template-columns:1fr 1fr !important}}
 @media(max-width:520px){.coverage-grid[style*="repeat(4"]{grid-template-columns:1fr !important}}
+
+/* ---------- RAMOS INTERACTIVOS ---------- */
+.ramo-btn{cursor:pointer;text-align:left;font-family:inherit;transition:transform .18s ease, box-shadow .18s ease, border-color .18s}
+.ramo-btn:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(11,31,23,.12)}
+.ramo-btn.active{border:2px solid #9dc531;box-shadow:0 0 0 4px rgba(201,242,75,.35)}
+.ramo-btn .ver{display:inline-block;margin-top:12px;color:#5a7a16;font-weight:700;font-size:.82rem}
+.ramo-panel{margin-top:28px;animation:fadeup .35s ease}
+@keyframes fadeup{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.ramo-detail-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:26px;align-items:start}
+.ramo-info{background:var(--white);border:2px solid #9dc531;border-radius:24px;padding:32px;box-shadow:0 20px 50px rgba(11,31,23,.1)}
+.ramo-info h3{font-size:1.35rem;margin-bottom:10px}
+.ramo-info .d-intro{color:var(--gray);font-size:.95rem}
+.ramo-info h4{font-size:.9rem;margin:18px 0 8px;color:var(--dark)}
+.ramo-info ul{margin:0 0 4px 20px;color:var(--gray);font-size:.92rem}
+.ramo-info li{margin-bottom:5px}
+.ramo-info .d-nota{margin-top:16px;font-size:.75rem;color:var(--gray)}
+.ramo-panel .form-card{border-top:5px solid var(--lime);position:sticky;top:90px}
+@media(max-width:900px){.ramo-detail-grid{grid-template-columns:1fr}.ramo-panel .form-card{position:static}}

@@ -47,207 +47,421 @@
   </div>
 </section>
 
-<section class="section">
+<section class="section" id="ramos">
   <div class="container">
     <div class="section-head center">
       <span class="tag">Nuestros ramos</span>
       <h2>¿Qué seguros de daños gestionamos?</h2>
+      <p>👇 <b>Haz clic en el seguro que te interesa</b>: verás toda la información en detalle y podrás cotizarlo de una vez con un formulario hecho a la medida.</p>
     </div>
-    <div class="coverage-grid">
-      <div class="coverage-card"><div class="emoji">🔥</div><h3>Incendio</h3><p>Daños materiales por fuego, explosión o caída de rayo en tus bienes e inmuebles.</p></div>
-      <div class="coverage-card"><div class="emoji">🌍</div><h3>Terremoto</h3><p>Eventos de la naturaleza: sismo, temblor y erupción volcánica.</p></div>
-      <div class="coverage-card"><div class="emoji">🚗</div><h3>Automóviles</h3><p>Pérdida total y parcial, hurto, RC y asistencia en vía 24/7 para tu vehículo.</p></div>
-      <div class="coverage-card"><div class="emoji">🚚</div><h3>Transporte</h3><p>Protege tus mercancías en trayectos nacionales e internacionales.</p></div>
-      <div class="coverage-card"><div class="emoji">📜</div><h3>Cumplimiento</h3><p>Garantiza el cumplimiento de contratos ante entidades públicas y privadas.</p></div>
-      <div class="coverage-card"><div class="emoji">🧑‍⚖️</div><h3>Responsabilidad civil</h3><p>Cubre daños y perjuicios causados a terceros por tu actividad.</p></div>
-      <div class="coverage-card"><div class="emoji">💼</div><h3>Manejo</h3><p>Protege a tu empresa contra fraudes y actos deshonestos de empleados.</p></div>
-      <div class="coverage-card"><div class="emoji">🥷</div><h3>Sustracción (hurto)</h3><p>Hurto de contenidos, equipos, mercancías y dinero.</p></div>
-      <div class="coverage-card"><div class="emoji">⚙️</div><h3>Ingeniería</h3><p>Montaje, construcción, rotura de maquinaria y equipo electrónico.</p></div>
-      <div class="coverage-card"><div class="emoji">📉</div><h3>Lucro cesante</h3><p>Respaldo económico si tu negocio debe detener operaciones.</p></div>
-      <div class="coverage-card"><div class="emoji">💳</div><h3>Crédito</h3><p>Protege tu cartera ante el no pago de tus clientes.</p></div>
-      <div class="coverage-card"><div class="emoji">✈️</div><h3>Aviación</h3><p>Cobertura para aeronaves, pasajeros y responsabilidad ante terceros.</p></div>
-      <div class="coverage-card"><div class="emoji">🚢</div><h3>Navegación marítima</h3><p>Embarcaciones comerciales y de recreo, casco y responsabilidad.</p></div>
-      <div class="coverage-card"><div class="emoji">🛡️</div><h3>Todo riesgo</h3><p>La protección más completa para hogares, empresas y copropiedades.</p></div>
+    <div class="coverage-grid ramo-select">
+      <button class="coverage-card ramo-btn" data-ramo="autos"><div class="emoji">🚗</div><h3>Automóviles</h3><p>Pérdida total y parcial, hurto, RC y asistencia en vía 24/7 para tu vehículo.</p><span class="ver">Ver información y cotizar →</span></button>
+      <button class="coverage-card ramo-btn" data-ramo="todo-riesgo"><div class="emoji">🛡️</div><h3>Todo riesgo hogar y empresa</h3><p>La protección más completa para hogares, empresas y copropiedades.</p><span class="ver">Ver información y cotizar →</span></button>
+      <button class="coverage-card ramo-btn" data-ramo="incendio"><div class="emoji">🔥</div><h3>Incendio</h3><p>Daños materiales por fuego, explosión o caída de rayo.</p><span class="ver">Ver información y cotizar →</span></button>
+      <button class="coverage-card ramo-btn" data-ramo="terremoto"><div class="emoji">🌍</div><h3>Terremoto</h3><p>Eventos de la naturaleza: sismo, temblor y erupción volcánica.</p><span class="ver">Ver información y cotizar →</span></button>
+      <button class="coverage-card ramo-btn" data-ramo="transporte"><div class="emoji">🚚</div><h3>Transporte de mercancías</h3><p>Protege tus mercancías en trayectos nacionales e internacionales.</p><span class="ver">Ver información y cotizar →</span></button>
+      <button class="coverage-card ramo-btn" data-ramo="cumplimiento"><div class="emoji">📜</div><h3>Cumplimiento</h3><p>Garantiza contratos ante entidades públicas y privadas.</p><span class="ver">Ver información y cotizar →</span></button>
+      <button class="coverage-card ramo-btn" data-ramo="rc"><div class="emoji">🧑‍⚖️</div><h3>Responsabilidad civil</h3><p>Cubre daños y perjuicios causados a terceros por tu actividad.</p><span class="ver">Ver información y cotizar →</span></button>
+      <button class="coverage-card ramo-btn" data-ramo="manejo"><div class="emoji">💼</div><h3>Manejo (infidelidad)</h3><p>Protege a tu empresa contra fraudes de empleados.</p><span class="ver">Ver información y cotizar →</span></button>
+      <button class="coverage-card ramo-btn" data-ramo="sustraccion"><div class="emoji">🥷</div><h3>Sustracción (hurto)</h3><p>Hurto de contenidos, equipos, mercancías y dinero.</p><span class="ver">Ver información y cotizar →</span></button>
+      <button class="coverage-card ramo-btn" data-ramo="ingenieria"><div class="emoji">⚙️</div><h3>Ingeniería</h3><p>Montaje, construcción, rotura de maquinaria y equipo electrónico.</p><span class="ver">Ver información y cotizar →</span></button>
+      <button class="coverage-card ramo-btn" data-ramo="lucro"><div class="emoji">📉</div><h3>Lucro cesante</h3><p>Respaldo económico si tu negocio debe detener operaciones.</p><span class="ver">Ver información y cotizar →</span></button>
+      <button class="coverage-card ramo-btn" data-ramo="credito"><div class="emoji">💳</div><h3>Crédito</h3><p>Protege tu cartera ante el no pago de tus clientes.</p><span class="ver">Ver información y cotizar →</span></button>
+      <button class="coverage-card ramo-btn" data-ramo="aviacion"><div class="emoji">✈️</div><h3>Aviación</h3><p>Cobertura para aeronaves, pasajeros y terceros.</p><span class="ver">Ver información y cotizar →</span></button>
+      <button class="coverage-card ramo-btn" data-ramo="navegacion"><div class="emoji">🚢</div><h3>Navegación marítima</h3><p>Embarcaciones comerciales y de recreo: casco y responsabilidad.</p><span class="ver">Ver información y cotizar →</span></button>
     </div>
-  </div>
-</section>
-
-<section class="section detalle" style="padding:70px 0">
-  <div class="container" style="max-width:880px">
-    <div class="section-head center">
-      <span class="tag">Información detallada</span>
-      <h2>Cada seguro de daños, explicado a fondo</h2>
-      <p>Sabemos que asegurar es una decisión importante. Aquí está todo lo que debes saber de cada seguro: qué cubre, qué no, y qué necesitas para cotizar. Sin letra pequeña escondida.</p>
-    </div>
-      <details>
-        <summary>🚗 Automóviles (todo riesgo vehicular)</summary>
-        <div class="d-body">
-          <p>Protege tu vehículo más allá del SOAT: daños propios, hurto y los perjuicios que causes a terceros. Es la diferencia entre perder tu carro y tener quién responda. Incluye asistencias que usas todo el año, no solo en un accidente.</p>
+    <div class="ramo-panel" id="panel-autos" hidden>
+      <div class="ramo-detail-grid">
+        <div class="ramo-info">
+          <h3>🚗 Automóviles</h3>
+          <p class="d-intro">Protege tu vehículo más allá del SOAT: daños propios, hurto y los perjuicios que causes a terceros. Incluye asistencias que usas todo el año, no solo en un accidente.</p>
           <h4>✅ ¿Qué cubre normalmente?</h4>
-          <ul><li>Pérdida total y parcial por daños (choque, volcamiento, granizo, inundación)</li><li>Pérdida total y parcial por hurto</li><li>Responsabilidad civil: daños a bienes y personas de terceros (hasta el límite contratado)</li><li>Asistencia en vía 24/7: grúa, carro taller, cambio de llanta, batería</li><li>Conductor elegido, vehículo de reemplazo y pequeños accesorios (según plan)</li></ul>
+          <ul><li>Pérdida total y parcial por daños (choque, volcamiento, granizo, inundación)</li><li>Pérdida total y parcial por hurto</li><li>Responsabilidad civil: daños a bienes y personas de terceros</li><li>Asistencia en vía 24/7: grúa, carro taller, cambio de llanta</li><li>Conductor elegido y vehículo de reemplazo (según plan)</li></ul>
           <h4>⚠️ Exclusiones frecuentes</h4>
-          <ul><li>Conducir bajo efectos del alcohol o sin licencia vigente</li><li>Uso distinto al declarado (ej. servicio público sin declararlo)</li><li>Desgaste natural, fallas mecánicas propias del uso</li></ul>
+          <ul><li>Conducir bajo efectos del alcohol o sin licencia vigente</li><li>Uso distinto al declarado (ej. servicio público sin declararlo)</li><li>Desgaste natural y fallas mecánicas propias del uso</li></ul>
           <h4>📋 Lo que necesitas para cotizar</h4>
-          <ul><li>Placa del vehículo (con eso obtenemos marca, línea y modelo)</li><li>Ciudad de circulación</li><li>Edad y género del conductor principal</li></ul>
+          <ul><li>Placa del vehículo</li><li>Ciudad de circulación</li><li>Edad y género del conductor principal</li></ul>
+          <p class="d-nota">* Las coberturas y exclusiones exactas varían según la aseguradora y el plan. Tu asesor te explica las condiciones completas antes de contratar.</p>
         </div>
-      </details>
-      <details>
-        <summary>🛡️ Todo riesgo hogar y empresa</summary>
-        <div class="d-body">
-          <p>La protección más completa para inmuebles y contenidos: cubre daños súbitos e imprevistos bajo la modalidad 'todo riesgo' — todo está cubierto salvo lo expresamente excluido. Aplica para hogares, locales, oficinas, bodegas y copropiedades.</p>
+        <div class="form-card">
+          <h3>Cotiza tu seguro de Automóviles</h3>
+          <p class="sub">Solo los datos necesarios para este seguro. Te respondemos en menos de 24h.</p>
+          <form data-tipo="Seguros de Daños">
+            <div class="form-grid">
+              <div class="full"><label>Nombre completo *</label><input type="text" name="nombre" placeholder="Tu nombre y apellido" required /></div><div><label>Celular / WhatsApp *</label><input type="tel" name="telefono" placeholder="300 000 0000" required /></div><div><label>Correo electrónico *</label><input type="email" name="email" placeholder="tucorreo@mail.com" required /></div><div class="full"><label>Ciudad *</label><input type="text" name="ciudad" placeholder="Ej. Bogotá" required /></div><div><label>Placa del vehículo *</label><input type="text" name="placa" placeholder="ABC123" required /></div><div><label>Marca y línea *</label><input type="text" name="marca" placeholder="Ej. Mazda 3" required /></div><div class="full"><label>Modelo (año) *</label><input type="number" name="modelo" placeholder="Ej. 2022" required /></div>
+              <input type="hidden" name="ramo" value="Automóviles" />
+            </div>
+            <button class="btn btn-lime" type="submit">Solicitar cotización →</button>
+            <p class="form-note">🔒 Tus datos están protegidos. Solo los usamos para contactarte.</p>
+            <div class="form-msg"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="ramo-panel" id="panel-todo-riesgo" hidden>
+      <div class="ramo-detail-grid">
+        <div class="ramo-info">
+          <h3>🛡️ Todo riesgo hogar y empresa</h3>
+          <p class="d-intro">Cubre daños súbitos e imprevistos bajo la modalidad 'todo riesgo': todo está cubierto salvo lo expresamente excluido. Para hogares, locales, oficinas, bodegas y copropiedades.</p>
           <h4>✅ ¿Qué cubre normalmente?</h4>
-          <ul><li>Incendio, explosión, rayo y humo</li><li>Daños por agua: rotura de tubos, tanques e inundaciones</li><li>Terremoto, temblor y eventos de la naturaleza</li><li>Sustracción de contenidos y responsabilidad civil familiar o empresarial</li><li>Rotura de vidrios, equipos eléctricos y electrónicos</li></ul>
+          <ul><li>Incendio, explosión, rayo y humo</li><li>Daños por agua: rotura de tubos e inundaciones</li><li>Terremoto y eventos de la naturaleza</li><li>Sustracción de contenidos y responsabilidad civil</li><li>Rotura de vidrios y equipos eléctricos/electrónicos</li></ul>
           <h4>⚠️ Exclusiones frecuentes</h4>
           <ul><li>Desgaste, humedad progresiva y falta de mantenimiento</li><li>Bienes a la intemperie no declarados</li><li>Daños intencionales del asegurado</li></ul>
           <h4>📋 Lo que necesitas para cotizar</h4>
-          <ul><li>Dirección y tipo de inmueble (casa, apto, local, bodega)</li><li>Valor comercial del inmueble y/o de los contenidos</li><li>Si es propio, arrendado o en copropiedad</li></ul>
+          <ul><li>Dirección y tipo de inmueble</li><li>Valor comercial del inmueble y/o contenidos</li><li>Si es propio, arrendado o copropiedad</li></ul>
+          <p class="d-nota">* Las coberturas y exclusiones exactas varían según la aseguradora y el plan. Tu asesor te explica las condiciones completas antes de contratar.</p>
         </div>
-      </details>
-      <details>
-        <summary>🔥 Incendio</summary>
-        <div class="d-body">
-          <p>El ramo tradicional para proteger edificaciones y contenidos contra fuego y eventos aliados. Es la cobertura que exigen los bancos sobre inmuebles hipotecados (seguro de incendio y terremoto del deudor).</p>
+        <div class="form-card">
+          <h3>Cotiza tu seguro de Todo riesgo hogar y empresa</h3>
+          <p class="sub">Solo los datos necesarios para este seguro. Te respondemos en menos de 24h.</p>
+          <form data-tipo="Seguros de Daños">
+            <div class="form-grid">
+              <div class="full"><label>Nombre completo *</label><input type="text" name="nombre" placeholder="Tu nombre y apellido" required /></div><div><label>Celular / WhatsApp *</label><input type="tel" name="telefono" placeholder="300 000 0000" required /></div><div><label>Correo electrónico *</label><input type="email" name="email" placeholder="tucorreo@mail.com" required /></div><div class="full"><label>Ciudad *</label><input type="text" name="ciudad" placeholder="Ej. Bogotá" required /></div><div><label>¿Qué quieres asegurar? *</label><select name="bien" required><option value="" disabled selected>Selecciona una opción</option><option>Hogar / Apartamento</option><option>Local comercial</option><option>Empresa / Bodega</option><option>Copropiedad / Edificio</option></select></div><div><label>Valor aproximado a asegurar *</label><select name="valor" required><option value="" disabled selected>Selecciona una opción</option><option>Menos de $200 millones</option><option>$200–500 millones</option><option>$500–1.000 millones</option><option>Más de $1.000 millones</option></select></div><div class="full"><label>¿Propio o arrendado? *</label><select name="tenencia" required><option value="" disabled selected>Selecciona una opción</option><option>Propio</option><option>Arrendado</option></select></div>
+              <input type="hidden" name="ramo" value="Todo riesgo hogar y empresa" />
+            </div>
+            <button class="btn btn-lime" type="submit">Solicitar cotización →</button>
+            <p class="form-note">🔒 Tus datos están protegidos. Solo los usamos para contactarte.</p>
+            <div class="form-msg"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="ramo-panel" id="panel-incendio" hidden>
+      <div class="ramo-detail-grid">
+        <div class="ramo-info">
+          <h3>🔥 Incendio</h3>
+          <p class="d-intro">El ramo tradicional para proteger edificaciones y contenidos contra fuego y eventos aliados. Es la cobertura que exigen los bancos sobre inmuebles hipotecados.</p>
           <h4>✅ ¿Qué cubre normalmente?</h4>
-          <ul><li>Daños materiales por fuego, explosión y caída de rayo</li><li>Extensión a humo, hollín y daños por extinción del incendio</li><li>Amparos aliados: anegación, vientos fuertes, impacto de vehículos</li><li>Puede incluir remoción de escombros</li></ul>
+          <ul><li>Daños materiales por fuego, explosión y caída de rayo</li><li>Humo, hollín y daños por extinción del incendio</li><li>Amparos aliados: anegación, vientos fuertes, impacto de vehículos</li><li>Remoción de escombros (según plan)</li></ul>
           <h4>⚠️ Exclusiones frecuentes</h4>
-          <ul><li>Combustión espontánea no accidental</li><li>Cortocircuito sin llama (se cubre con amparo de equipos eléctricos)</li><li>Bienes fuera del predio asegurado</li></ul>
+          <ul><li>Combustión espontánea no accidental</li><li>Cortocircuito sin llama (requiere amparo de equipos eléctricos)</li><li>Bienes fuera del predio asegurado</li></ul>
           <h4>📋 Lo que necesitas para cotizar</h4>
-          <ul><li>Ubicación y uso del inmueble</li><li>Valor de reconstrucción de la edificación</li><li>Materiales de construcción predominantes</li></ul>
+          <ul><li>Ubicación y uso del inmueble</li><li>Valor de reconstrucción</li><li>Materiales de construcción</li></ul>
+          <p class="d-nota">* Las coberturas y exclusiones exactas varían según la aseguradora y el plan. Tu asesor te explica las condiciones completas antes de contratar.</p>
         </div>
-      </details>
-      <details>
-        <summary>🌍 Terremoto</summary>
-        <div class="d-body">
-          <p>Cubre los daños a edificaciones y contenidos causados por movimientos sísmicos. En un país sísmico como Colombia es la cobertura patrimonial más importante para propietarios, y opera usualmente junto al seguro de incendio.</p>
+        <div class="form-card">
+          <h3>Cotiza tu seguro de Incendio</h3>
+          <p class="sub">Solo los datos necesarios para este seguro. Te respondemos en menos de 24h.</p>
+          <form data-tipo="Seguros de Daños">
+            <div class="form-grid">
+              <div class="full"><label>Nombre completo *</label><input type="text" name="nombre" placeholder="Tu nombre y apellido" required /></div><div><label>Celular / WhatsApp *</label><input type="tel" name="telefono" placeholder="300 000 0000" required /></div><div><label>Correo electrónico *</label><input type="email" name="email" placeholder="tucorreo@mail.com" required /></div><div class="full"><label>Ciudad *</label><input type="text" name="ciudad" placeholder="Ej. Bogotá" required /></div><div><label>Tipo de inmueble *</label><input type="text" name="inmueble" placeholder="Ej. Bodega industrial" required /></div><div><label>Valor de reconstrucción aprox. *</label><select name="valor" required><option value="" disabled selected>Selecciona una opción</option><option>Menos de $300 millones</option><option>$300–800 millones</option><option>Más de $800 millones</option><option>No lo sé aún</option></select></div>
+              <input type="hidden" name="ramo" value="Incendio" />
+            </div>
+            <button class="btn btn-lime" type="submit">Solicitar cotización →</button>
+            <p class="form-note">🔒 Tus datos están protegidos. Solo los usamos para contactarte.</p>
+            <div class="form-msg"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="ramo-panel" id="panel-terremoto" hidden>
+      <div class="ramo-detail-grid">
+        <div class="ramo-info">
+          <h3>🌍 Terremoto</h3>
+          <p class="d-intro">Cubre los daños a edificaciones y contenidos por movimientos sísmicos. En un país sísmico como Colombia es la cobertura patrimonial más importante para propietarios.</p>
           <h4>✅ ¿Qué cubre normalmente?</h4>
           <ul><li>Daños estructurales por sismo, temblor o terremoto</li><li>Maremoto, erupción volcánica y eventos asociados</li><li>Remoción de escombros</li><li>Contenidos afectados por el evento</li></ul>
           <h4>⚠️ Exclusiones frecuentes</h4>
-          <ul><li>Deducible propio del ramo: usualmente 1% al 5% del valor asegurable (lo pactado en póliza)</li><li>Edificaciones sin sismorresistencia declarada en mal estado</li><li>Fisuras estéticas preexistentes</li></ul>
+          <ul><li>Deducible propio del ramo: usualmente 1% al 5% del valor asegurable</li><li>Edificaciones sin sismorresistencia en mal estado</li><li>Fisuras estéticas preexistentes</li></ul>
           <h4>📋 Lo que necesitas para cotizar</h4>
-          <ul><li>Ciudad y zona sísmica del inmueble</li><li>Año de construcción y número de pisos</li><li>Valor de reconstrucción</li></ul>
+          <ul><li>Ciudad y zona sísmica</li><li>Año de construcción y número de pisos</li><li>Valor de reconstrucción</li></ul>
+          <p class="d-nota">* Las coberturas y exclusiones exactas varían según la aseguradora y el plan. Tu asesor te explica las condiciones completas antes de contratar.</p>
         </div>
-      </details>
-      <details>
-        <summary>🚚 Transporte de mercancías</summary>
-        <div class="d-body">
-          <p>Protege tus mercancías mientras se mueven: por carretera, mar o aire, a nivel nacional o internacional. Aplica tanto para el empresario que despacha como para el que importa, con pólizas por trayecto único o automáticas para flujos permanentes.</p>
+        <div class="form-card">
+          <h3>Cotiza tu seguro de Terremoto</h3>
+          <p class="sub">Solo los datos necesarios para este seguro. Te respondemos en menos de 24h.</p>
+          <form data-tipo="Seguros de Daños">
+            <div class="form-grid">
+              <div class="full"><label>Nombre completo *</label><input type="text" name="nombre" placeholder="Tu nombre y apellido" required /></div><div><label>Celular / WhatsApp *</label><input type="tel" name="telefono" placeholder="300 000 0000" required /></div><div><label>Correo electrónico *</label><input type="email" name="email" placeholder="tucorreo@mail.com" required /></div><div class="full"><label>Ciudad *</label><input type="text" name="ciudad" placeholder="Ej. Bogotá" required /></div><div><label>Año de construcción *</label><input type="number" name="ano_construccion" placeholder="Ej. 2010" required /></div><div><label>Valor del inmueble aprox. *</label><select name="valor" required><option value="" disabled selected>Selecciona una opción</option><option>Menos de $300 millones</option><option>$300–800 millones</option><option>Más de $800 millones</option><option>No lo sé aún</option></select></div>
+              <input type="hidden" name="ramo" value="Terremoto" />
+            </div>
+            <button class="btn btn-lime" type="submit">Solicitar cotización →</button>
+            <p class="form-note">🔒 Tus datos están protegidos. Solo los usamos para contactarte.</p>
+            <div class="form-msg"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="ramo-panel" id="panel-transporte" hidden>
+      <div class="ramo-detail-grid">
+        <div class="ramo-info">
+          <h3>🚚 Transporte de mercancías</h3>
+          <p class="d-intro">Protege tus mercancías mientras se mueven: por carretera, mar o aire. Pólizas por trayecto único o automáticas para flujos permanentes, para quien despacha o importa.</p>
           <h4>✅ ¿Qué cubre normalmente?</h4>
-          <ul><li>Daños o pérdida de la mercancía durante el transporte</li><li>Hurto, saqueo y falta de entrega</li><li>Accidentes del vehículo transportador, volcamiento, incendio</li><li>Cargue, descargue y permanencias temporales (según condiciones)</li><li>Trayectos nacionales e importaciones/exportaciones</li></ul>
+          <ul><li>Daños o pérdida de la mercancía durante el transporte</li><li>Hurto, saqueo y falta de entrega</li><li>Accidentes del vehículo transportador, volcamiento, incendio</li><li>Cargue, descargue y permanencias (según condiciones)</li><li>Trayectos nacionales e importaciones/exportaciones</li></ul>
           <h4>⚠️ Exclusiones frecuentes</h4>
-          <ul><li>Embalaje inadecuado o insuficiente</li><li>Vicio propio de la mercancía (ej. perecederos mal refrigerados por su naturaleza)</li><li>Mercancías prohibidas o sin documentación</li></ul>
+          <ul><li>Embalaje inadecuado o insuficiente</li><li>Vicio propio de la mercancía</li><li>Mercancías prohibidas o sin documentación</li></ul>
           <h4>📋 Lo que necesitas para cotizar</h4>
-          <ul><li>Tipo de mercancía y valor promedio por despacho</li><li>Trayectos frecuentes (origen–destino)</li><li>Medio de transporte y número de despachos al mes</li></ul>
+          <ul><li>Tipo de mercancía y valor por despacho</li><li>Trayectos frecuentes</li><li>Número de despachos al mes</li></ul>
+          <p class="d-nota">* Las coberturas y exclusiones exactas varían según la aseguradora y el plan. Tu asesor te explica las condiciones completas antes de contratar.</p>
         </div>
-      </details>
-      <details>
-        <summary>📜 Cumplimiento</summary>
-        <div class="d-body">
-          <p>Garantiza el cumplimiento de contratos ante entidades estatales o privadas: si el contratista incumple, la aseguradora responde. Es requisito habitual en contratación pública (Ley 80) y cada vez más común entre privados.</p>
+        <div class="form-card">
+          <h3>Cotiza tu seguro de Transporte de mercancías</h3>
+          <p class="sub">Solo los datos necesarios para este seguro. Te respondemos en menos de 24h.</p>
+          <form data-tipo="Seguros de Daños">
+            <div class="form-grid">
+              <div class="full"><label>Nombre completo *</label><input type="text" name="nombre" placeholder="Tu nombre y apellido" required /></div><div><label>Celular / WhatsApp *</label><input type="tel" name="telefono" placeholder="300 000 0000" required /></div><div><label>Correo electrónico *</label><input type="email" name="email" placeholder="tucorreo@mail.com" required /></div><div class="full"><label>Ciudad *</label><input type="text" name="ciudad" placeholder="Ej. Bogotá" required /></div><div><label>Tipo de mercancía *</label><input type="text" name="mercancia" placeholder="Ej. Electrodomésticos" required /></div><div><label>Valor promedio por despacho *</label><input type="text" name="valor_despacho" placeholder="Ej. $80 millones" required /></div><div class="full"><label>Trayecto frecuente *</label><input type="text" name="trayecto" placeholder="Ej. Bogotá – Barranquilla" required /></div>
+              <input type="hidden" name="ramo" value="Transporte de mercancías" />
+            </div>
+            <button class="btn btn-lime" type="submit">Solicitar cotización →</button>
+            <p class="form-note">🔒 Tus datos están protegidos. Solo los usamos para contactarte.</p>
+            <div class="form-msg"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="ramo-panel" id="panel-cumplimiento" hidden>
+      <div class="ramo-detail-grid">
+        <div class="ramo-info">
+          <h3>📜 Cumplimiento</h3>
+          <p class="d-intro">Garantiza el cumplimiento de contratos: si el contratista incumple, la aseguradora responde. Requisito habitual en contratación pública (Ley 80) y cada vez más común entre privados.</p>
           <h4>✅ ¿Qué cubre normalmente?</h4>
-          <ul><li>Seriedad de la oferta en licitaciones</li><li>Cumplimiento del contrato y correcta inversión del anticipo</li><li>Pago de salarios y prestaciones del personal del contratista</li><li>Estabilidad de obra y calidad del bien o servicio</li><li>Responsabilidad civil derivada del contrato (amparo anexo)</li></ul>
+          <ul><li>Seriedad de la oferta en licitaciones</li><li>Cumplimiento del contrato y correcta inversión del anticipo</li><li>Pago de salarios y prestaciones del personal</li><li>Estabilidad de obra y calidad del bien o servicio</li><li>RC derivada del contrato (amparo anexo)</li></ul>
           <h4>⚠️ Exclusiones frecuentes</h4>
-          <ul><li>Incumplimientos por fuerza mayor no imputables al contratista quedan por fuera de la sanción</li><li>Contratos ya incumplidos antes de expedir la póliza</li></ul>
+          <ul><li>Incumplimientos previos a la expedición de la póliza</li><li>Fuerza mayor no imputable al contratista (según condiciones)</li></ul>
           <h4>📋 Lo que necesitas para cotizar</h4>
-          <ul><li>Copia del contrato o pliegos de la licitación</li><li>Valor y plazo del contrato</li><li>Experiencia y estados financieros del contratista</li></ul>
+          <ul><li>Copia del contrato o pliegos</li><li>Valor y plazo del contrato</li><li>Experiencia y estados financieros del contratista</li></ul>
+          <p class="d-nota">* Las coberturas y exclusiones exactas varían según la aseguradora y el plan. Tu asesor te explica las condiciones completas antes de contratar.</p>
         </div>
-      </details>
-      <details>
-        <summary>🧑‍⚖️ Responsabilidad civil</summary>
-        <div class="d-body">
-          <p>Protege tu patrimonio cuando causas daños a terceros: desde la RC familiar (daños que causes tú, tus hijos o tu mascota) hasta la RC profesional y empresarial (médicos, constructores, hoteles, talleres, parqueaderos).</p>
+        <div class="form-card">
+          <h3>Cotiza tu seguro de Cumplimiento</h3>
+          <p class="sub">Solo los datos necesarios para este seguro. Te respondemos en menos de 24h.</p>
+          <form data-tipo="Seguros de Daños">
+            <div class="form-grid">
+              <div class="full"><label>Nombre completo *</label><input type="text" name="nombre" placeholder="Tu nombre y apellido" required /></div><div><label>Celular / WhatsApp *</label><input type="tel" name="telefono" placeholder="300 000 0000" required /></div><div><label>Correo electrónico *</label><input type="email" name="email" placeholder="tucorreo@mail.com" required /></div><div class="full"><label>Ciudad *</label><input type="text" name="ciudad" placeholder="Ej. Bogotá" required /></div><div><label>Entidad contratante *</label><input type="text" name="contratante" placeholder="Ej. Alcaldía de Medellín" required /></div><div><label>Valor del contrato *</label><input type="text" name="valor_contrato" placeholder="Ej. $1.200 millones" required /></div><div class="full"><label>Plazo del contrato *</label><input type="text" name="plazo" placeholder="Ej. 18 meses" required /></div>
+              <input type="hidden" name="ramo" value="Cumplimiento" />
+            </div>
+            <button class="btn btn-lime" type="submit">Solicitar cotización →</button>
+            <p class="form-note">🔒 Tus datos están protegidos. Solo los usamos para contactarte.</p>
+            <div class="form-msg"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="ramo-panel" id="panel-rc" hidden>
+      <div class="ramo-detail-grid">
+        <div class="ramo-info">
+          <h3>🧑‍⚖️ Responsabilidad civil</h3>
+          <p class="d-intro">Protege tu patrimonio cuando causas daños a terceros: desde la RC familiar hasta la RC profesional y empresarial (médicos, constructores, hoteles, talleres, parqueaderos).</p>
           <h4>✅ ¿Qué cubre normalmente?</h4>
-          <ul><li>Daños materiales y lesiones a terceros</li><li>Perjuicios patrimoniales derivados</li><li>Gastos de defensa jurídica</li><li>Modalidades: familiar, profesional, médica, empresarial, ambiental, drones y más</li></ul>
+          <ul><li>Daños materiales y lesiones a terceros</li><li>Perjuicios patrimoniales derivados</li><li>Gastos de defensa jurídica</li><li>Modalidades: familiar, profesional, médica, empresarial, ambiental, drones</li></ul>
           <h4>⚠️ Exclusiones frecuentes</h4>
-          <ul><li>Daños intencionales (dolo)</li><li>Multas y sanciones administrativas</li><li>Responsabilidad asumida por contrato más allá de la ley (salvo pacto)</li></ul>
+          <ul><li>Daños intencionales (dolo)</li><li>Multas y sanciones administrativas</li><li>Responsabilidad contractual más allá de la ley (salvo pacto)</li></ul>
           <h4>📋 Lo que necesitas para cotizar</h4>
-          <ul><li>Actividad o profesión a asegurar</li><li>Historial de reclamaciones</li><li>Límite de cobertura deseado</li></ul>
+          <ul><li>Actividad o profesión</li><li>Historial de reclamaciones</li><li>Límite de cobertura deseado</li></ul>
+          <p class="d-nota">* Las coberturas y exclusiones exactas varían según la aseguradora y el plan. Tu asesor te explica las condiciones completas antes de contratar.</p>
         </div>
-      </details>
-      <details>
-        <summary>💼 Manejo (infidelidad de empleados)</summary>
-        <div class="d-body">
-          <p>Protege a la empresa contra pérdidas causadas por actos deshonestos de sus propios empleados: hurto, fraude, abuso de confianza, falsificación. Esencial para cargos que manejan dinero, inventarios o pagos.</p>
+        <div class="form-card">
+          <h3>Cotiza tu seguro de Responsabilidad civil</h3>
+          <p class="sub">Solo los datos necesarios para este seguro. Te respondemos en menos de 24h.</p>
+          <form data-tipo="Seguros de Daños">
+            <div class="form-grid">
+              <div class="full"><label>Nombre completo *</label><input type="text" name="nombre" placeholder="Tu nombre y apellido" required /></div><div><label>Celular / WhatsApp *</label><input type="tel" name="telefono" placeholder="300 000 0000" required /></div><div><label>Correo electrónico *</label><input type="email" name="email" placeholder="tucorreo@mail.com" required /></div><div class="full"><label>Ciudad *</label><input type="text" name="ciudad" placeholder="Ej. Bogotá" required /></div><div><label>Actividad o profesión *</label><input type="text" name="actividad" placeholder="Ej. Médico independiente" required /></div><div><label>Cobertura deseada *</label><select name="limite" required><option value="" disabled selected>Selecciona una opción</option><option>$100–300 millones</option><option>$300–1.000 millones</option><option>Más de $1.000 millones</option><option>No lo sé aún</option></select></div>
+              <input type="hidden" name="ramo" value="Responsabilidad civil" />
+            </div>
+            <button class="btn btn-lime" type="submit">Solicitar cotización →</button>
+            <p class="form-note">🔒 Tus datos están protegidos. Solo los usamos para contactarte.</p>
+            <div class="form-msg"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="ramo-panel" id="panel-manejo" hidden>
+      <div class="ramo-detail-grid">
+        <div class="ramo-info">
+          <h3>💼 Manejo (infidelidad)</h3>
+          <p class="d-intro">Protege a la empresa contra pérdidas por actos deshonestos de sus propios empleados: hurto, fraude, abuso de confianza, falsificación. Esencial para cargos que manejan dinero o inventarios.</p>
           <h4>✅ ¿Qué cubre normalmente?</h4>
-          <ul><li>Hurto y abuso de confianza de empleados</li><li>Falsificación y fraude interno</li><li>Pérdidas descubiertas hasta cierto tiempo después del retiro del empleado</li><li>Costos de auditoría para cuantificar la pérdida (según plan)</li></ul>
+          <ul><li>Hurto y abuso de confianza de empleados</li><li>Falsificación y fraude interno</li><li>Pérdidas descubiertas hasta cierto tiempo después del retiro</li><li>Costos de auditoría (según plan)</li></ul>
           <h4>⚠️ Exclusiones frecuentes</h4>
-          <ul><li>Pérdidas contables sin prueba del acto deshonesto</li><li>Faltantes de inventario por mal control administrativo</li><li>Actos de socios o representantes legales (según condiciones)</li></ul>
+          <ul><li>Pérdidas contables sin prueba del acto deshonesto</li><li>Faltantes por mal control administrativo</li><li>Actos de socios o representantes (según condiciones)</li></ul>
           <h4>📋 Lo que necesitas para cotizar</h4>
-          <ul><li>Número de empleados y cargos de manejo</li><li>Controles internos existentes</li><li>Monto máximo bajo custodia de un empleado</li></ul>
+          <ul><li>Número de empleados y cargos de manejo</li><li>Controles internos existentes</li><li>Monto máximo bajo custodia</li></ul>
+          <p class="d-nota">* Las coberturas y exclusiones exactas varían según la aseguradora y el plan. Tu asesor te explica las condiciones completas antes de contratar.</p>
         </div>
-      </details>
-      <details>
-        <summary>🥷 Sustracción (hurto)</summary>
-        <div class="d-body">
-          <p>Cubre el hurto de contenidos, equipos, mercancías y dinero dentro de tus instalaciones, con o sin violencia según el amparo contratado. Complemento natural del seguro de incendio para locales y empresas.</p>
+        <div class="form-card">
+          <h3>Cotiza tu seguro de Manejo (infidelidad)</h3>
+          <p class="sub">Solo los datos necesarios para este seguro. Te respondemos en menos de 24h.</p>
+          <form data-tipo="Seguros de Daños">
+            <div class="form-grid">
+              <div class="full"><label>Nombre completo *</label><input type="text" name="nombre" placeholder="Tu nombre y apellido" required /></div><div><label>Celular / WhatsApp *</label><input type="tel" name="telefono" placeholder="300 000 0000" required /></div><div><label>Correo electrónico *</label><input type="email" name="email" placeholder="tucorreo@mail.com" required /></div><div class="full"><label>Ciudad *</label><input type="text" name="ciudad" placeholder="Ej. Bogotá" required /></div><div><label>Empleados con cargos de manejo *</label><input type="number" name="num_empleados" placeholder="Ej. 5" required /></div><div><label>Monto máximo bajo custodia *</label><input type="text" name="monto_custodia" placeholder="Ej. $50 millones" required /></div>
+              <input type="hidden" name="ramo" value="Manejo (infidelidad)" />
+            </div>
+            <button class="btn btn-lime" type="submit">Solicitar cotización →</button>
+            <p class="form-note">🔒 Tus datos están protegidos. Solo los usamos para contactarte.</p>
+            <div class="form-msg"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="ramo-panel" id="panel-sustraccion" hidden>
+      <div class="ramo-detail-grid">
+        <div class="ramo-info">
+          <h3>🥷 Sustracción (hurto)</h3>
+          <p class="d-intro">Cubre el hurto de contenidos, equipos, mercancías y dinero dentro de tus instalaciones, con o sin violencia según el amparo. Complemento natural del seguro de incendio.</p>
           <h4>✅ ¿Qué cubre normalmente?</h4>
           <ul><li>Hurto calificado (con violencia o forzamiento)</li><li>Hurto simple (según plan)</li><li>Daños al inmueble causados por los ladrones</li><li>Dinero en caja y en tránsito (amparos específicos)</li></ul>
           <h4>⚠️ Exclusiones frecuentes</h4>
-          <ul><li>Faltantes detectados solo en inventarios</li><li>Hurto por empleados (eso lo cubre Manejo)</li><li>Bienes en vitrinas exteriores o a la intemperie sin protección</li></ul>
+          <ul><li>Faltantes detectados solo en inventarios</li><li>Hurto por empleados (eso lo cubre Manejo)</li><li>Bienes a la intemperie sin protección</li></ul>
           <h4>📋 Lo que necesitas para cotizar</h4>
-          <ul><li>Tipo de bienes y valores a proteger</li><li>Medidas de seguridad del local (alarmas, rejas, vigilancia)</li><li>Historial de siniestros</li></ul>
+          <ul><li>Bienes y valores a proteger</li><li>Medidas de seguridad del local</li><li>Historial de siniestros</li></ul>
+          <p class="d-nota">* Las coberturas y exclusiones exactas varían según la aseguradora y el plan. Tu asesor te explica las condiciones completas antes de contratar.</p>
         </div>
-      </details>
-      <details>
-        <summary>⚙️ Ingeniería</summary>
-        <div class="d-body">
-          <p>Familia de seguros para proyectos y equipos: todo riesgo construcción, montaje de maquinaria, rotura de maquinaria, equipo electrónico y equipos de contratistas. Protege la inversión durante la obra y la operación.</p>
+        <div class="form-card">
+          <h3>Cotiza tu seguro de Sustracción (hurto)</h3>
+          <p class="sub">Solo los datos necesarios para este seguro. Te respondemos en menos de 24h.</p>
+          <form data-tipo="Seguros de Daños">
+            <div class="form-grid">
+              <div class="full"><label>Nombre completo *</label><input type="text" name="nombre" placeholder="Tu nombre y apellido" required /></div><div><label>Celular / WhatsApp *</label><input type="tel" name="telefono" placeholder="300 000 0000" required /></div><div><label>Correo electrónico *</label><input type="email" name="email" placeholder="tucorreo@mail.com" required /></div><div class="full"><label>Ciudad *</label><input type="text" name="ciudad" placeholder="Ej. Bogotá" required /></div><div><label>Bienes a proteger *</label><input type="text" name="bienes" placeholder="Ej. Mercancía y equipos de cómputo" required /></div><div><label>Medidas de seguridad *</label><select name="seguridad" required><option value="" disabled selected>Selecciona una opción</option><option>Alarma monitoreada</option><option>Vigilancia privada</option><option>Rejas / cerraduras reforzadas</option><option>Varias de las anteriores</option><option>Ninguna aún</option></select></div>
+              <input type="hidden" name="ramo" value="Sustracción (hurto)" />
+            </div>
+            <button class="btn btn-lime" type="submit">Solicitar cotización →</button>
+            <p class="form-note">🔒 Tus datos están protegidos. Solo los usamos para contactarte.</p>
+            <div class="form-msg"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="ramo-panel" id="panel-ingenieria" hidden>
+      <div class="ramo-detail-grid">
+        <div class="ramo-info">
+          <h3>⚙️ Ingeniería</h3>
+          <p class="d-intro">Familia de seguros para proyectos y equipos: todo riesgo construcción, montaje, rotura de maquinaria, equipo electrónico y equipos de contratistas.</p>
           <h4>✅ ¿Qué cubre normalmente?</h4>
-          <ul><li>Todo riesgo construcción y montaje (daños a la obra en ejecución)</li><li>Rotura de maquinaria por causas internas o externas</li><li>Equipo electrónico: daños, hurto y portátiles fuera del predio</li><li>Maquinaria y equipo de contratistas en obra</li><li>RC derivada de la obra ante terceros</li></ul>
+          <ul><li>Todo riesgo construcción y montaje</li><li>Rotura de maquinaria por causas internas o externas</li><li>Equipo electrónico: daños, hurto y portátiles</li><li>Maquinaria y equipo de contratistas</li><li>RC derivada de la obra</li></ul>
           <h4>⚠️ Exclusiones frecuentes</h4>
-          <ul><li>Desgaste normal y defectos preexistentes</li><li>Diseños defectuosos (según condiciones y anexo contratado)</li><li>Paralizaciones prolongadas de la obra sin aviso</li></ul>
+          <ul><li>Desgaste normal y defectos preexistentes</li><li>Diseños defectuosos (según anexo)</li><li>Paralizaciones prolongadas sin aviso</li></ul>
           <h4>📋 Lo que necesitas para cotizar</h4>
-          <ul><li>Tipo y valor del proyecto o equipos</li><li>Plazo de la obra o montaje</li><li>Experiencia del constructor/contratista</li></ul>
+          <ul><li>Tipo y valor del proyecto o equipos</li><li>Plazo de la obra o montaje</li><li>Experiencia del constructor</li></ul>
+          <p class="d-nota">* Las coberturas y exclusiones exactas varían según la aseguradora y el plan. Tu asesor te explica las condiciones completas antes de contratar.</p>
         </div>
-      </details>
-      <details>
-        <summary>📉 Lucro cesante</summary>
-        <div class="d-body">
-          <p>Cuando un siniestro (incendio, rotura de maquinaria) detiene tu negocio, el daño físico es solo la mitad del problema: sigues teniendo nómina, arriendos y clientes que se van. Este seguro paga la utilidad y los gastos fijos mientras te recuperas.</p>
+        <div class="form-card">
+          <h3>Cotiza tu seguro de Ingeniería</h3>
+          <p class="sub">Solo los datos necesarios para este seguro. Te respondemos en menos de 24h.</p>
+          <form data-tipo="Seguros de Daños">
+            <div class="form-grid">
+              <div class="full"><label>Nombre completo *</label><input type="text" name="nombre" placeholder="Tu nombre y apellido" required /></div><div><label>Celular / WhatsApp *</label><input type="tel" name="telefono" placeholder="300 000 0000" required /></div><div><label>Correo electrónico *</label><input type="email" name="email" placeholder="tucorreo@mail.com" required /></div><div class="full"><label>Ciudad *</label><input type="text" name="ciudad" placeholder="Ej. Bogotá" required /></div><div><label>Tipo de proyecto o equipo *</label><input type="text" name="proyecto" placeholder="Ej. Edificio de 8 pisos / Retroexcavadora" required /></div><div><label>Valor aproximado *</label><input type="text" name="valor" placeholder="Ej. $2.000 millones" required /></div><div class="full"><label>Plazo de la obra *</label><input type="text" name="plazo" placeholder="Ej. 14 meses" required /></div>
+              <input type="hidden" name="ramo" value="Ingeniería" />
+            </div>
+            <button class="btn btn-lime" type="submit">Solicitar cotización →</button>
+            <p class="form-note">🔒 Tus datos están protegidos. Solo los usamos para contactarte.</p>
+            <div class="form-msg"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="ramo-panel" id="panel-lucro" hidden>
+      <div class="ramo-detail-grid">
+        <div class="ramo-info">
+          <h3>📉 Lucro cesante</h3>
+          <p class="d-intro">Cuando un siniestro detiene tu negocio, el daño físico es solo la mitad del problema: sigues pagando nómina y arriendos. Este seguro paga la utilidad y los gastos fijos mientras te recuperas.</p>
           <h4>✅ ¿Qué cubre normalmente?</h4>
           <ul><li>Utilidad bruta dejada de percibir durante la paralización</li><li>Gastos fijos que continúan (nómina, arriendo, servicios)</li><li>Gastos extraordinarios para acelerar la reanudación</li><li>Periodo de indemnización pactado (6, 12, 24 meses)</li></ul>
           <h4>⚠️ Exclusiones frecuentes</h4>
-          <ul><li>Paralizaciones por causas no amparadas en la póliza de daños base</li><li>Pérdida de mercado no derivada del siniestro</li><li>Multas por incumplimientos con clientes (salvo anexo)</li></ul>
+          <ul><li>Paralizaciones por causas no amparadas en la póliza base</li><li>Pérdida de mercado no derivada del siniestro</li><li>Multas con clientes (salvo anexo)</li></ul>
           <h4>📋 Lo que necesitas para cotizar</h4>
-          <ul><li>Estados financieros del negocio</li><li>Utilidad bruta anual y gastos fijos</li><li>Tiempo estimado de recuperación ante un siniestro grave</li></ul>
+          <ul><li>Estados financieros del negocio</li><li>Utilidad bruta anual y gastos fijos</li><li>Tiempo estimado de recuperación</li></ul>
+          <p class="d-nota">* Las coberturas y exclusiones exactas varían según la aseguradora y el plan. Tu asesor te explica las condiciones completas antes de contratar.</p>
         </div>
-      </details>
-      <details>
-        <summary>💳 Crédito</summary>
-        <div class="d-body">
-          <p>Protege la cartera de tu empresa: si tus clientes no pagan sus facturas por insolvencia o mora prolongada, la aseguradora indemniza. Vendes a crédito con tranquilidad y hasta puedes acceder a mejor financiación con tu cartera asegurada.</p>
+        <div class="form-card">
+          <h3>Cotiza tu seguro de Lucro cesante</h3>
+          <p class="sub">Solo los datos necesarios para este seguro. Te respondemos en menos de 24h.</p>
+          <form data-tipo="Seguros de Daños">
+            <div class="form-grid">
+              <div class="full"><label>Nombre completo *</label><input type="text" name="nombre" placeholder="Tu nombre y apellido" required /></div><div><label>Celular / WhatsApp *</label><input type="tel" name="telefono" placeholder="300 000 0000" required /></div><div><label>Correo electrónico *</label><input type="email" name="email" placeholder="tucorreo@mail.com" required /></div><div class="full"><label>Ciudad *</label><input type="text" name="ciudad" placeholder="Ej. Bogotá" required /></div><div><label>Actividad del negocio *</label><input type="text" name="actividad" placeholder="Ej. Planta de alimentos" required /></div><div><label>Utilidad bruta anual aprox. *</label><input type="text" name="utilidad" placeholder="Ej. $900 millones" required /></div>
+              <input type="hidden" name="ramo" value="Lucro cesante" />
+            </div>
+            <button class="btn btn-lime" type="submit">Solicitar cotización →</button>
+            <p class="form-note">🔒 Tus datos están protegidos. Solo los usamos para contactarte.</p>
+            <div class="form-msg"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="ramo-panel" id="panel-credito" hidden>
+      <div class="ramo-detail-grid">
+        <div class="ramo-info">
+          <h3>💳 Crédito</h3>
+          <p class="d-intro">Si tus clientes no pagan sus facturas por insolvencia o mora prolongada, la aseguradora indemniza. Vendes a crédito con tranquilidad y mejoras tu acceso a financiación.</p>
           <h4>✅ ¿Qué cubre normalmente?</h4>
-          <ul><li>No pago de facturas por insolvencia del comprador</li><li>Mora prolongada certificada</li><li>Ventas a crédito nacionales y de exportación</li><li>Servicios de estudio y monitoreo de tus compradores</li></ul>
+          <ul><li>No pago de facturas por insolvencia del comprador</li><li>Mora prolongada certificada</li><li>Ventas a crédito nacionales y de exportación</li><li>Estudio y monitoreo de tus compradores</li></ul>
           <h4>⚠️ Exclusiones frecuentes</h4>
-          <ul><li>Ventas a empresas vinculadas o del mismo grupo</li><li>Facturas en disputa comercial</li><li>Clientes que ya estaban en mora al contratar</li></ul>
+          <ul><li>Ventas a empresas vinculadas</li><li>Facturas en disputa comercial</li><li>Clientes ya en mora al contratar</li></ul>
           <h4>📋 Lo que necesitas para cotizar</h4>
-          <ul><li>Ventas anuales a crédito</li><li>Principales clientes y plazos de pago</li><li>Historial de cartera vencida</li></ul>
+          <ul><li>Ventas anuales a crédito</li><li>Principales clientes y plazos</li><li>Historial de cartera vencida</li></ul>
+          <p class="d-nota">* Las coberturas y exclusiones exactas varían según la aseguradora y el plan. Tu asesor te explica las condiciones completas antes de contratar.</p>
         </div>
-      </details>
-      <details>
-        <summary>✈️ Aviación</summary>
-        <div class="d-body">
-          <p>Cobertura especializada para aeronaves: desde avionetas y helicópteros hasta drones comerciales. Cubre el casco de la aeronave, la responsabilidad ante pasajeros y terceros en tierra, y los riesgos propios de la operación aérea.</p>
+        <div class="form-card">
+          <h3>Cotiza tu seguro de Crédito</h3>
+          <p class="sub">Solo los datos necesarios para este seguro. Te respondemos en menos de 24h.</p>
+          <form data-tipo="Seguros de Daños">
+            <div class="form-grid">
+              <div class="full"><label>Nombre completo *</label><input type="text" name="nombre" placeholder="Tu nombre y apellido" required /></div><div><label>Celular / WhatsApp *</label><input type="tel" name="telefono" placeholder="300 000 0000" required /></div><div><label>Correo electrónico *</label><input type="email" name="email" placeholder="tucorreo@mail.com" required /></div><div class="full"><label>Ciudad *</label><input type="text" name="ciudad" placeholder="Ej. Bogotá" required /></div><div><label>Ventas anuales a crédito *</label><input type="text" name="ventas" placeholder="Ej. $3.000 millones" required /></div><div><label>Plazo de pago a clientes *</label><input type="text" name="plazo_pago" placeholder="Ej. 60 días" required /></div>
+              <input type="hidden" name="ramo" value="Crédito" />
+            </div>
+            <button class="btn btn-lime" type="submit">Solicitar cotización →</button>
+            <p class="form-note">🔒 Tus datos están protegidos. Solo los usamos para contactarte.</p>
+            <div class="form-msg"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="ramo-panel" id="panel-aviacion" hidden>
+      <div class="ramo-detail-grid">
+        <div class="ramo-info">
+          <h3>✈️ Aviación</h3>
+          <p class="d-intro">Cobertura especializada para aeronaves: desde avionetas y helicópteros hasta drones comerciales. Cubre el casco, la responsabilidad ante pasajeros y terceros en tierra.</p>
           <h4>✅ ¿Qué cubre normalmente?</h4>
-          <ul><li>Daños o pérdida total de la aeronave (casco) en vuelo, rodaje o tierra</li><li>RC ante pasajeros y sus equipajes</li><li>RC ante terceros en superficie</li><li>Accidentes personales de tripulación</li><li>Drones: casco y RC (requisito para operación comercial)</li></ul>
+          <ul><li>Daños o pérdida total de la aeronave (casco)</li><li>RC ante pasajeros y sus equipajes</li><li>RC ante terceros en superficie</li><li>Accidentes personales de tripulación</li><li>Drones: casco y RC</li></ul>
           <h4>⚠️ Exclusiones frecuentes</h4>
-          <ul><li>Operación fuera de los usos declarados</li><li>Pilotos sin las licencias y horas requeridas</li><li>Zonas de conflicto o restricción aérea</li></ul>
+          <ul><li>Operación fuera de los usos declarados</li><li>Pilotos sin licencias y horas requeridas</li><li>Zonas de restricción aérea</li></ul>
           <h4>📋 Lo que necesitas para cotizar</h4>
-          <ul><li>Tipo de aeronave, año y valor</li><li>Uso (privado, comercial, escuela, fumigación)</li><li>Horas de vuelo de los pilotos</li></ul>
+          <ul><li>Tipo de aeronave, año y valor</li><li>Uso (privado, comercial, escuela)</li><li>Horas de vuelo de los pilotos</li></ul>
+          <p class="d-nota">* Las coberturas y exclusiones exactas varían según la aseguradora y el plan. Tu asesor te explica las condiciones completas antes de contratar.</p>
         </div>
-      </details>
-      <details>
-        <summary>🚢 Navegación marítima</summary>
-        <div class="d-body">
-          <p>Seguros para embarcaciones comerciales y de recreo: yates, lanchas, remolcadores y cargueros. Cubre el casco y la maquinaria de la nave, y la responsabilidad por daños a terceros, tripulación y contaminación.</p>
+        <div class="form-card">
+          <h3>Cotiza tu seguro de Aviación</h3>
+          <p class="sub">Solo los datos necesarios para este seguro. Te respondemos en menos de 24h.</p>
+          <form data-tipo="Seguros de Daños">
+            <div class="form-grid">
+              <div class="full"><label>Nombre completo *</label><input type="text" name="nombre" placeholder="Tu nombre y apellido" required /></div><div><label>Celular / WhatsApp *</label><input type="tel" name="telefono" placeholder="300 000 0000" required /></div><div><label>Correo electrónico *</label><input type="email" name="email" placeholder="tucorreo@mail.com" required /></div><div class="full"><label>Ciudad *</label><input type="text" name="ciudad" placeholder="Ej. Bogotá" required /></div><div><label>Tipo de aeronave *</label><input type="text" name="aeronave" placeholder="Ej. Cessna 182 / Dron DJI" required /></div><div><label>Uso *</label><select name="uso" required><option value="" disabled selected>Selecciona una opción</option><option>Privado</option><option>Comercial</option><option>Escuela</option><option>Fumigación</option><option>Dron comercial</option></select></div>
+              <input type="hidden" name="ramo" value="Aviación" />
+            </div>
+            <button class="btn btn-lime" type="submit">Solicitar cotización →</button>
+            <p class="form-note">🔒 Tus datos están protegidos. Solo los usamos para contactarte.</p>
+            <div class="form-msg"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="ramo-panel" id="panel-navegacion" hidden>
+      <div class="ramo-detail-grid">
+        <div class="ramo-info">
+          <h3>🚢 Navegación marítima</h3>
+          <p class="d-intro">Seguros para embarcaciones comerciales y de recreo: yates, lanchas, remolcadores. Cubre el casco y la maquinaria, y la responsabilidad por daños a terceros y contaminación.</p>
           <h4>✅ ¿Qué cubre normalmente?</h4>
-          <ul><li>Casco y maquinaria: daños, encallamiento, colisión, incendio</li><li>Pérdida total y salvamento</li><li>RC por daños a otras embarcaciones, muelles y personas</li><li>Efectos personales y equipos de navegación (según plan)</li></ul>
+          <ul><li>Casco y maquinaria: daños, encallamiento, colisión, incendio</li><li>Pérdida total y salvamento</li><li>RC por daños a otras embarcaciones, muelles y personas</li><li>Efectos personales y equipos (según plan)</li></ul>
           <h4>⚠️ Exclusiones frecuentes</h4>
-          <ul><li>Navegar fuera de la zona geográfica declarada</li><li>Falta de mantenimiento y navegabilidad</li><li>Participación en regatas sin anexo específico</li></ul>
+          <ul><li>Navegar fuera de la zona declarada</li><li>Falta de mantenimiento y navegabilidad</li><li>Regatas sin anexo específico</li></ul>
           <h4>📋 Lo que necesitas para cotizar</h4>
-          <ul><li>Tipo, año y valor de la embarcación</li><li>Zona de navegación habitual</li><li>Uso (recreo, comercial, pesca, transporte)</li></ul>
+          <ul><li>Tipo, año y valor de la embarcación</li><li>Zona de navegación habitual</li><li>Uso (recreo, comercial, pesca)</li></ul>
+          <p class="d-nota">* Las coberturas y exclusiones exactas varían según la aseguradora y el plan. Tu asesor te explica las condiciones completas antes de contratar.</p>
         </div>
-      </details>
-    <p style="font-size:.8rem;color:var(--gray);margin-top:18px;text-align:center">* Las coberturas, exclusiones y deducibles exactos varían según la aseguradora y el plan. Antes de contratar, tu asesor Gestionar te explica las condiciones completas de cada opción.</p>
+        <div class="form-card">
+          <h3>Cotiza tu seguro de Navegación marítima</h3>
+          <p class="sub">Solo los datos necesarios para este seguro. Te respondemos en menos de 24h.</p>
+          <form data-tipo="Seguros de Daños">
+            <div class="form-grid">
+              <div class="full"><label>Nombre completo *</label><input type="text" name="nombre" placeholder="Tu nombre y apellido" required /></div><div><label>Celular / WhatsApp *</label><input type="tel" name="telefono" placeholder="300 000 0000" required /></div><div><label>Correo electrónico *</label><input type="email" name="email" placeholder="tucorreo@mail.com" required /></div><div class="full"><label>Ciudad *</label><input type="text" name="ciudad" placeholder="Ej. Bogotá" required /></div><div><label>Tipo de embarcación *</label><input type="text" name="embarcacion" placeholder="Ej. Lancha 24 pies" required /></div><div><label>Uso *</label><select name="uso" required><option value="" disabled selected>Selecciona una opción</option><option>Recreo</option><option>Comercial</option><option>Pesca</option><option>Transporte</option></select></div><div class="full"><label>Zona de navegación *</label><input type="text" name="zona" placeholder="Ej. Cartagena / Islas del Rosario" required /></div>
+              <input type="hidden" name="ramo" value="Navegación marítima" />
+            </div>
+            <button class="btn btn-lime" type="submit">Solicitar cotización →</button>
+            <p class="form-note">🔒 Tus datos están protegidos. Solo los usamos para contactarte.</p>
+            <div class="form-msg"></div>
+          </form>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -383,5 +597,20 @@
 </a>
 
 <script src="app.js"></script>
+<script>
+document.querySelectorAll('.ramo-btn').forEach(function(b){
+  b.addEventListener('click', function(){
+    var open = b.classList.contains('active');
+    document.querySelectorAll('.ramo-btn').forEach(function(x){x.classList.remove('active')});
+    document.querySelectorAll('.ramo-panel').forEach(function(p){p.hidden=true});
+    if(!open){
+      b.classList.add('active');
+      var p = document.getElementById('panel-'+b.dataset.ramo);
+      p.hidden = false;
+      setTimeout(function(){p.scrollIntoView({behavior:'smooth', block:'start'});}, 60);
+    }
+  });
+});
+</script>
 </body>
 </html>

@@ -47,155 +47,305 @@
   </div>
 </section>
 
-<section class="section">
+<section class="section" id="ramos">
   <div class="container">
     <div class="section-head center">
       <span class="tag">Nuestros ramos</span>
       <h2>¿Qué seguros de personas gestionamos?</h2>
+      <p>👇 <b>Haz clic en el seguro que te interesa</b>: verás toda la información en detalle y podrás cotizarlo de una vez con un formulario hecho a la medida.</p>
     </div>
-    <div class="coverage-grid">
-      <div class="coverage-card"><div class="emoji">❤️</div><h3>Vida individual</h3><p>Respaldo económico para tu familia en caso de fallecimiento o invalidez.</p></div>
-      <div class="coverage-card"><div class="emoji">👥</div><h3>Vida grupo</h3><p>Protección colectiva para los empleados de tu empresa o los miembros de tu organización.</p></div>
-      <div class="coverage-card"><div class="emoji">🤕</div><h3>Accidentes personales</h3><p>Indemnización por lesiones, invalidez o muerte accidental, 24/7 en cualquier lugar.</p></div>
-      <div class="coverage-card"><div class="emoji">🏥</div><h3>Salud</h3><p>Pólizas de salud y hospitalización con acceso a la mejor red médica.</p></div>
-      <div class="coverage-card"><div class="emoji">🎗️</div><h3>Enfermedades graves</h3><p>Anticipo de capital para tratamientos de alto costo como cáncer, infarto o ACV.</p></div>
-      <div class="coverage-card"><div class="emoji">🕊️</div><h3>Exequias</h3><p>Cubre los gastos funerarios para que tu familia no asuma esa carga.</p></div>
-      <div class="coverage-card"><div class="emoji">🎓</div><h3>Educación</h3><p>Garantiza los estudios de tus hijos, pase lo que pase.</p></div>
-      <div class="coverage-card"><div class="emoji">🧓</div><h3>Pensiones y rentas vitalicias</h3><p>Asegura un ingreso estable para tu retiro, según la modalidad autorizada.</p></div>
-      <div class="coverage-card"><div class="emoji">⛑️</div><h3>ARL (empresarial)</h3><p>Riesgos laborales para proteger a los trabajadores de tu empresa.</p></div>
-      <div class="coverage-card"><div class="emoji">✈️</div><h3>Asistencia en viajes</h3><p>Viaja tranquilo con Terrawin y Assist Card: cobertura médica y asistencia en el exterior.</p></div>
+    <div class="coverage-grid ramo-select">
+      <button class="coverage-card ramo-btn" data-ramo="vida-individual"><div class="emoji">❤️</div><h3>Vida individual</h3><p>Respaldo económico para tu familia en caso de fallecimiento o invalidez.</p><span class="ver">Ver información y cotizar →</span></button>
+      <button class="coverage-card ramo-btn" data-ramo="vida-grupo"><div class="emoji">👥</div><h3>Vida grupo</h3><p>Protección colectiva para los empleados de tu empresa u organización.</p><span class="ver">Ver información y cotizar →</span></button>
+      <button class="coverage-card ramo-btn" data-ramo="accidentes"><div class="emoji">🤕</div><h3>Accidentes personales</h3><p>Indemnización por lesiones, invalidez o muerte accidental, 24/7.</p><span class="ver">Ver información y cotizar →</span></button>
+      <button class="coverage-card ramo-btn" data-ramo="salud"><div class="emoji">🏥</div><h3>Salud</h3><p>Pólizas y planes de hospitalización con acceso a la mejor red médica.</p><span class="ver">Ver información y cotizar →</span></button>
+      <button class="coverage-card ramo-btn" data-ramo="enfermedades-graves"><div class="emoji">🎗️</div><h3>Enfermedades graves</h3><p>Anticipo de capital para tratamientos de alto costo.</p><span class="ver">Ver información y cotizar →</span></button>
+      <button class="coverage-card ramo-btn" data-ramo="exequias"><div class="emoji">🕊️</div><h3>Exequias</h3><p>Cubre los gastos funerarios para que tu familia no asuma esa carga.</p><span class="ver">Ver información y cotizar →</span></button>
+      <button class="coverage-card ramo-btn" data-ramo="educacion"><div class="emoji">🎓</div><h3>Educación</h3><p>Garantiza los estudios de tus hijos, pase lo que pase.</p><span class="ver">Ver información y cotizar →</span></button>
+      <button class="coverage-card ramo-btn" data-ramo="pensiones"><div class="emoji">🧓</div><h3>Pensiones y rentas vitalicias</h3><p>Asegura un ingreso estable para tu retiro.</p><span class="ver">Ver información y cotizar →</span></button>
+      <button class="coverage-card ramo-btn" data-ramo="arl"><div class="emoji">⛑️</div><h3>ARL (empresarial)</h3><p>Riesgos laborales para proteger a los trabajadores de tu empresa.</p><span class="ver">Ver información y cotizar →</span></button>
+      <button class="coverage-card ramo-btn" data-ramo="viajes"><div class="emoji">✈️</div><h3>Asistencia en viajes</h3><p>Viaja tranquilo con Terrawin y Assist Card.</p><span class="ver">Ver información y cotizar →</span></button>
     </div>
-  </div>
-</section>
-
-<section class="section detalle" style="padding:70px 0">
-  <div class="container" style="max-width:880px">
-    <div class="section-head center">
-      <span class="tag">Información detallada</span>
-      <h2>Cada seguro de personas, explicado a fondo</h2>
-      <p>Sabemos que asegurar es una decisión importante. Aquí está todo lo que debes saber de cada seguro: qué cubre, qué no, y qué necesitas para cotizar. Sin letra pequeña escondida.</p>
-    </div>
-      <details>
-        <summary>❤️ Vida individual</summary>
-        <div class="d-body">
-          <p>Es un contrato con la aseguradora que garantiza el pago de un capital a tus beneficiarios si falleces, o a ti mismo en caso de invalidez total y permanente. Es la base de la protección familiar: reemplaza tus ingresos cuando ya no puedas generarlos.</p>
+    <div class="ramo-panel" id="panel-vida-individual" hidden>
+      <div class="ramo-detail-grid">
+        <div class="ramo-info">
+          <h3>❤️ Vida individual</h3>
+          <p class="d-intro">Es un contrato con la aseguradora que garantiza el pago de un capital a tus beneficiarios si falleces, o a ti mismo en caso de invalidez total y permanente. Es la base de la protección familiar: reemplaza tus ingresos cuando ya no puedas generarlos.</p>
           <h4>✅ ¿Qué cubre normalmente?</h4>
           <ul><li>Fallecimiento por cualquier causa (natural o accidental)</li><li>Invalidez total y permanente por accidente o enfermedad</li><li>Anticipo de capital por enfermedades graves (según plan)</li><li>Auxilio funerario y gastos exequiales</li><li>Asistencias en vida: orientación médica, psicológica y jurídica</li></ul>
           <h4>⚠️ Exclusiones frecuentes</h4>
           <ul><li>Suicidio durante el primer año de vigencia (varía según aseguradora)</li><li>Fallecimiento por participación en actividades ilícitas</li><li>Enfermedades preexistentes no declaradas al contratar</li></ul>
           <h4>📋 Lo que necesitas para cotizar</h4>
           <ul><li>Edad y fecha de nacimiento</li><li>Ocupación y si practicas deportes de alto riesgo</li><li>Valor que deseas asegurar (se sugiere de 3 a 5 veces tu ingreso anual)</li></ul>
+          <p class="d-nota">* Las coberturas y exclusiones exactas varían según la aseguradora y el plan. Tu asesor te explica las condiciones completas antes de contratar.</p>
         </div>
-      </details>
-      <details>
-        <summary>👥 Vida grupo</summary>
-        <div class="d-body">
-          <p>Póliza colectiva que una empresa u organización contrata para proteger a sus empleados o miembros. Es más económica por persona que una póliza individual y suele ser parte del paquete de beneficios laborales; en muchos casos es exigida en contratos laborales o crediticios.</p>
+        <div class="form-card">
+          <h3>Cotiza tu seguro de Vida individual</h3>
+          <p class="sub">Solo los datos necesarios para este seguro. Te respondemos en menos de 24h.</p>
+          <form data-tipo="Seguros de Personas">
+            <div class="form-grid">
+              <div class="full"><label>Nombre completo *</label><input type="text" name="nombre" placeholder="Tu nombre y apellido" required /></div><div><label>Celular / WhatsApp *</label><input type="tel" name="telefono" placeholder="300 000 0000" required /></div><div><label>Correo electrónico *</label><input type="email" name="email" placeholder="tucorreo@mail.com" required /></div><div class="full"><label>Ciudad *</label><input type="text" name="ciudad" placeholder="Ej. Bogotá" required /></div><div><label>Fecha de nacimiento *</label><input type="date" name="fecha_nacimiento" placeholder="" required /></div><div><label>¿Fumas? *</label><select name="fumador" required><option value="" disabled selected>Selecciona una opción</option><option>No</option><option>Sí</option></select></div><div class="full"><label>¿Cuánto quieres asegurar? *</label><select name="valor_asegurar" required><option value="" disabled selected>Selecciona una opción</option><option>$50–100 millones</option><option>$100–300 millones</option><option>$300–500 millones</option><option>Más de $500 millones</option><option>No lo sé aún</option></select></div>
+              <input type="hidden" name="ramo" value="Vida individual" />
+            </div>
+            <button class="btn btn-lime" type="submit">Solicitar cotización →</button>
+            <p class="form-note">🔒 Tus datos están protegidos. Solo los usamos para contactarte.</p>
+            <div class="form-msg"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="ramo-panel" id="panel-vida-grupo" hidden>
+      <div class="ramo-detail-grid">
+        <div class="ramo-info">
+          <h3>👥 Vida grupo</h3>
+          <p class="d-intro">Póliza colectiva que una empresa u organización contrata para proteger a sus empleados o miembros. Es más económica por persona que una póliza individual y suele ser parte del paquete de beneficios laborales.</p>
           <h4>✅ ¿Qué cubre normalmente?</h4>
-          <ul><li>Fallecimiento e invalidez de los asegurados del grupo</li><li>Enfermedades graves y desmembración (según plan)</li><li>Auxilio funerario para el empleado y a veces su familia</li><li>Posibilidad de incluir beneficios adicionales por convenio</li></ul>
+          <ul><li>Fallecimiento e invalidez de los asegurados del grupo</li><li>Enfermedades graves y desmembración (según plan)</li><li>Auxilio funerario para el empleado y a veces su familia</li><li>Beneficios adicionales por convenio</li></ul>
           <h4>⚠️ Exclusiones frecuentes</h4>
           <ul><li>Personas fuera del rango de edad de ingreso definido en la póliza</li><li>Preexistencias no declaradas en el ingreso al grupo</li><li>Personal no reportado en la nómina asegurada</li></ul>
           <h4>📋 Lo que necesitas para cotizar</h4>
           <ul><li>Número de personas a asegurar y edades</li><li>Actividad económica de la empresa</li><li>Valor asegurado por persona o múltiplo salarial deseado</li></ul>
+          <p class="d-nota">* Las coberturas y exclusiones exactas varían según la aseguradora y el plan. Tu asesor te explica las condiciones completas antes de contratar.</p>
         </div>
-      </details>
-      <details>
-        <summary>🤕 Accidentes personales</summary>
-        <div class="d-body">
-          <p>Cubre las consecuencias económicas de un accidente: muerte accidental, invalidez, desmembración y gastos médicos derivados. Funciona 24/7, dentro y fuera del trabajo, en cualquier lugar del mundo, y es complemento ideal de la EPS y la ARL.</p>
+        <div class="form-card">
+          <h3>Cotiza tu seguro de Vida grupo</h3>
+          <p class="sub">Solo los datos necesarios para este seguro. Te respondemos en menos de 24h.</p>
+          <form data-tipo="Seguros de Personas">
+            <div class="form-grid">
+              <div class="full"><label>Nombre completo *</label><input type="text" name="nombre" placeholder="Tu nombre y apellido" required /></div><div><label>Celular / WhatsApp *</label><input type="tel" name="telefono" placeholder="300 000 0000" required /></div><div><label>Correo electrónico *</label><input type="email" name="email" placeholder="tucorreo@mail.com" required /></div><div class="full"><label>Ciudad *</label><input type="text" name="ciudad" placeholder="Ej. Bogotá" required /></div><div><label>Nombre de la empresa *</label><input type="text" name="empresa" placeholder="Ej. Comercial XYZ SAS" required /></div><div><label>¿Cuántas personas asegurar? *</label><input type="number" name="num_personas" placeholder="Ej. 25" required /></div><div class="full"><label>Actividad de la empresa *</label><input type="text" name="actividad" placeholder="Ej. Transporte de carga" required /></div>
+              <input type="hidden" name="ramo" value="Vida grupo" />
+            </div>
+            <button class="btn btn-lime" type="submit">Solicitar cotización →</button>
+            <p class="form-note">🔒 Tus datos están protegidos. Solo los usamos para contactarte.</p>
+            <div class="form-msg"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="ramo-panel" id="panel-accidentes" hidden>
+      <div class="ramo-detail-grid">
+        <div class="ramo-info">
+          <h3>🤕 Accidentes personales</h3>
+          <p class="d-intro">Cubre las consecuencias económicas de un accidente: muerte accidental, invalidez, desmembración y gastos médicos derivados. Funciona 24/7, dentro y fuera del trabajo, en cualquier lugar del mundo.</p>
           <h4>✅ ¿Qué cubre normalmente?</h4>
           <ul><li>Muerte accidental e invalidez por accidente</li><li>Desmembración o pérdida funcional de miembros</li><li>Gastos médicos, clínicos y de rehabilitación por accidente</li><li>Renta diaria por incapacidad (según plan)</li><li>Cobertura mundial, las 24 horas</li></ul>
           <h4>⚠️ Exclusiones frecuentes</h4>
           <ul><li>Enfermedades (no son accidente)</li><li>Lesiones autoinfligidas o bajo efectos de alcohol/drogas</li><li>Práctica profesional de deportes extremos sin declararla</li></ul>
           <h4>📋 Lo que necesitas para cotizar</h4>
           <ul><li>Edad y ocupación</li><li>Deportes o hobbies de riesgo que practiques</li><li>Valor asegurado deseado</li></ul>
+          <p class="d-nota">* Las coberturas y exclusiones exactas varían según la aseguradora y el plan. Tu asesor te explica las condiciones completas antes de contratar.</p>
         </div>
-      </details>
-      <details>
-        <summary>🏥 Salud</summary>
-        <div class="d-body">
-          <p>Pólizas de salud y planes de hospitalización y cirugía que complementan tu EPS: acceso a especialistas sin remisión, habitación individual, medicina prepagada o reembolsos, con las mejores redes médicas del país.</p>
+        <div class="form-card">
+          <h3>Cotiza tu seguro de Accidentes personales</h3>
+          <p class="sub">Solo los datos necesarios para este seguro. Te respondemos en menos de 24h.</p>
+          <form data-tipo="Seguros de Personas">
+            <div class="form-grid">
+              <div class="full"><label>Nombre completo *</label><input type="text" name="nombre" placeholder="Tu nombre y apellido" required /></div><div><label>Celular / WhatsApp *</label><input type="tel" name="telefono" placeholder="300 000 0000" required /></div><div><label>Correo electrónico *</label><input type="email" name="email" placeholder="tucorreo@mail.com" required /></div><div class="full"><label>Ciudad *</label><input type="text" name="ciudad" placeholder="Ej. Bogotá" required /></div><div><label>Edad *</label><input type="number" name="edad" placeholder="Ej. 35" required /></div><div><label>Ocupación *</label><input type="text" name="ocupacion" placeholder="Ej. Ingeniero" required /></div><div class="full"><label>¿Practicas deportes de riesgo? *</label><select name="deportes_riesgo" required><option value="" disabled selected>Selecciona una opción</option><option>No</option><option>Sí</option></select></div>
+              <input type="hidden" name="ramo" value="Accidentes personales" />
+            </div>
+            <button class="btn btn-lime" type="submit">Solicitar cotización →</button>
+            <p class="form-note">🔒 Tus datos están protegidos. Solo los usamos para contactarte.</p>
+            <div class="form-msg"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="ramo-panel" id="panel-salud" hidden>
+      <div class="ramo-detail-grid">
+        <div class="ramo-info">
+          <h3>🏥 Salud</h3>
+          <p class="d-intro">Pólizas de salud y planes de hospitalización y cirugía que complementan tu EPS: acceso a especialistas sin remisión, habitación individual y las mejores redes médicas del país.</p>
           <h4>✅ ¿Qué cubre normalmente?</h4>
-          <ul><li>Hospitalización y cirugía en clínicas de primer nivel</li><li>Consultas con especialistas sin remisión y sin filas</li><li>Exámenes de diagnóstico y tratamientos ambulatorios</li><li>Maternidad (con periodos de carencia)</li><li>Cobertura de urgencias a nivel nacional y, en algunos planes, internacional</li></ul>
+          <ul><li>Hospitalización y cirugía en clínicas de primer nivel</li><li>Consultas con especialistas sin remisión y sin filas</li><li>Exámenes de diagnóstico y tratamientos ambulatorios</li><li>Maternidad (con periodos de carencia)</li><li>Urgencias a nivel nacional y, en algunos planes, internacional</li></ul>
           <h4>⚠️ Exclusiones frecuentes</h4>
-          <ul><li>Preexistencias durante los primeros años o de forma permanente (según plan y aseguradora)</li><li>Tratamientos estéticos o experimentales</li><li>Periodos de carencia: tiempos mínimos antes de usar ciertas coberturas</li></ul>
+          <ul><li>Preexistencias durante los primeros años o de forma permanente (según plan)</li><li>Tratamientos estéticos o experimentales</li><li>Periodos de carencia antes de usar ciertas coberturas</li></ul>
           <h4>📋 Lo que necesitas para cotizar</h4>
-          <ul><li>Edad de cada persona a asegurar</li><li>Ciudad de residencia (define la red médica disponible)</li><li>Estado de salud general y preexistencias (se declaran, no siempre excluyen)</li></ul>
+          <ul><li>Edad de cada persona a asegurar</li><li>Ciudad de residencia (define la red médica)</li><li>Preexistencias (se declaran, no siempre excluyen)</li></ul>
+          <p class="d-nota">* Las coberturas y exclusiones exactas varían según la aseguradora y el plan. Tu asesor te explica las condiciones completas antes de contratar.</p>
         </div>
-      </details>
-      <details>
-        <summary>🎗️ Enfermedades graves</summary>
-        <div class="d-body">
-          <p>Paga un capital de una sola vez al ser diagnosticado con una enfermedad grave cubierta (cáncer, infarto, ACV, insuficiencia renal, entre otras). Ese dinero es tuyo: sirve para tratamientos, reemplazar ingresos o lo que necesites durante la recuperación.</p>
+        <div class="form-card">
+          <h3>Cotiza tu seguro de Salud</h3>
+          <p class="sub">Solo los datos necesarios para este seguro. Te respondemos en menos de 24h.</p>
+          <form data-tipo="Seguros de Personas">
+            <div class="form-grid">
+              <div class="full"><label>Nombre completo *</label><input type="text" name="nombre" placeholder="Tu nombre y apellido" required /></div><div><label>Celular / WhatsApp *</label><input type="tel" name="telefono" placeholder="300 000 0000" required /></div><div><label>Correo electrónico *</label><input type="email" name="email" placeholder="tucorreo@mail.com" required /></div><div class="full"><label>Ciudad *</label><input type="text" name="ciudad" placeholder="Ej. Bogotá" required /></div><div><label>Edades de quienes se aseguran *</label><input type="text" name="edades" placeholder="Ej. 34, 32 y 5 años" required /></div><div><label>¿Alguna preexistencia? *</label><select name="preexistencias" required><option value="" disabled selected>Selecciona una opción</option><option>No</option><option>Sí</option><option>Prefiero contarlo al asesor</option></select></div>
+              <input type="hidden" name="ramo" value="Salud" />
+            </div>
+            <button class="btn btn-lime" type="submit">Solicitar cotización →</button>
+            <p class="form-note">🔒 Tus datos están protegidos. Solo los usamos para contactarte.</p>
+            <div class="form-msg"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="ramo-panel" id="panel-enfermedades-graves" hidden>
+      <div class="ramo-detail-grid">
+        <div class="ramo-info">
+          <h3>🎗️ Enfermedades graves</h3>
+          <p class="d-intro">Paga un capital de una sola vez al ser diagnosticado con una enfermedad grave cubierta (cáncer, infarto, ACV, entre otras). Ese dinero es tuyo: para tratamientos, reemplazar ingresos o lo que necesites.</p>
           <h4>✅ ¿Qué cubre normalmente?</h4>
-          <ul><li>Pago de capital al diagnóstico de cáncer, infarto, ACV, esclerosis múltiple y más (lista según plan)</li><li>Libertad total de uso del dinero</li><li>Cobertura complementaria a la póliza de salud</li><li>Algunos planes incluyen chequeos preventivos</li></ul>
+          <ul><li>Pago de capital al diagnóstico de cáncer, infarto, ACV, esclerosis múltiple y más</li><li>Libertad total de uso del dinero</li><li>Complemento de la póliza de salud</li><li>Algunos planes incluyen chequeos preventivos</li></ul>
           <h4>⚠️ Exclusiones frecuentes</h4>
-          <ul><li>Enfermedades diagnosticadas antes de contratar</li><li>Periodo de carencia inicial (usualmente 90 días)</li><li>Etapas tempranas de algunas enfermedades según definición de la póliza</li></ul>
+          <ul><li>Enfermedades diagnosticadas antes de contratar</li><li>Periodo de carencia inicial (usualmente 90 días)</li><li>Etapas tempranas de algunas enfermedades según la póliza</li></ul>
           <h4>📋 Lo que necesitas para cotizar</h4>
-          <ul><li>Edad</li><li>Historial médico personal y familiar básico</li><li>Capital que deseas recibir en caso de diagnóstico</li></ul>
+          <ul><li>Edad</li><li>Historial médico personal y familiar básico</li><li>Capital que deseas recibir</li></ul>
+          <p class="d-nota">* Las coberturas y exclusiones exactas varían según la aseguradora y el plan. Tu asesor te explica las condiciones completas antes de contratar.</p>
         </div>
-      </details>
-      <details>
-        <summary>🕊️ Exequias</summary>
-        <div class="d-body">
-          <p>Cubre todos los gastos y trámites funerarios de tu núcleo familiar: desde el servicio funerario completo hasta apoyo en trámites legales, para que en el momento más difícil tu familia no tenga que preocuparse por el dinero.</p>
+        <div class="form-card">
+          <h3>Cotiza tu seguro de Enfermedades graves</h3>
+          <p class="sub">Solo los datos necesarios para este seguro. Te respondemos en menos de 24h.</p>
+          <form data-tipo="Seguros de Personas">
+            <div class="form-grid">
+              <div class="full"><label>Nombre completo *</label><input type="text" name="nombre" placeholder="Tu nombre y apellido" required /></div><div><label>Celular / WhatsApp *</label><input type="tel" name="telefono" placeholder="300 000 0000" required /></div><div><label>Correo electrónico *</label><input type="email" name="email" placeholder="tucorreo@mail.com" required /></div><div class="full"><label>Ciudad *</label><input type="text" name="ciudad" placeholder="Ej. Bogotá" required /></div><div><label>Edad *</label><input type="number" name="edad" placeholder="Ej. 40" required /></div><div><label>Capital deseado al diagnóstico *</label><select name="capital" required><option value="" disabled selected>Selecciona una opción</option><option>$50 millones</option><option>$100 millones</option><option>$200 millones o más</option><option>No lo sé aún</option></select></div>
+              <input type="hidden" name="ramo" value="Enfermedades graves" />
+            </div>
+            <button class="btn btn-lime" type="submit">Solicitar cotización →</button>
+            <p class="form-note">🔒 Tus datos están protegidos. Solo los usamos para contactarte.</p>
+            <div class="form-msg"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="ramo-panel" id="panel-exequias" hidden>
+      <div class="ramo-detail-grid">
+        <div class="ramo-info">
+          <h3>🕊️ Exequias</h3>
+          <p class="d-intro">Cubre todos los gastos y trámites funerarios de tu núcleo familiar: desde el servicio funerario completo hasta apoyo en trámites legales, para que en el momento más difícil tu familia no se preocupe por el dinero.</p>
           <h4>✅ ¿Qué cubre normalmente?</h4>
-          <ul><li>Servicio funerario completo (velación, cofre, cremación o inhumación)</li><li>Traslados a nivel nacional</li><li>Cobertura para el núcleo familiar e incluso padres (según plan)</li><li>Asistencia y acompañamiento en trámites</li></ul>
+          <ul><li>Servicio funerario completo (velación, cofre, cremación o inhumación)</li><li>Traslados a nivel nacional</li><li>Cobertura del núcleo familiar e incluso padres (según plan)</li><li>Acompañamiento en trámites</li></ul>
           <h4>⚠️ Exclusiones frecuentes</h4>
-          <ul><li>Miembros no declarados del grupo familiar</li><li>Periodos de carencia por muerte natural (usualmente 1-6 meses)</li></ul>
+          <ul><li>Miembros no declarados del grupo familiar</li><li>Periodos de carencia por muerte natural (1-6 meses usualmente)</li></ul>
           <h4>📋 Lo que necesitas para cotizar</h4>
           <ul><li>Personas a incluir y sus edades</li><li>Parentesco de cada integrante</li><li>Tipo de servicio deseado</li></ul>
+          <p class="d-nota">* Las coberturas y exclusiones exactas varían según la aseguradora y el plan. Tu asesor te explica las condiciones completas antes de contratar.</p>
         </div>
-      </details>
-      <details>
-        <summary>🎓 Educación</summary>
-        <div class="d-body">
-          <p>Seguro educativo que garantiza que tus hijos puedan estudiar pase lo que pase: combina ahorro programado con protección — si el tomador fallece o queda inválido, la aseguradora asume el pago del plan y la educación queda garantizada.</p>
+        <div class="form-card">
+          <h3>Cotiza tu seguro de Exequias</h3>
+          <p class="sub">Solo los datos necesarios para este seguro. Te respondemos en menos de 24h.</p>
+          <form data-tipo="Seguros de Personas">
+            <div class="form-grid">
+              <div class="full"><label>Nombre completo *</label><input type="text" name="nombre" placeholder="Tu nombre y apellido" required /></div><div><label>Celular / WhatsApp *</label><input type="tel" name="telefono" placeholder="300 000 0000" required /></div><div><label>Correo electrónico *</label><input type="email" name="email" placeholder="tucorreo@mail.com" required /></div><div class="full"><label>Ciudad *</label><input type="text" name="ciudad" placeholder="Ej. Bogotá" required /></div><div><label>Personas a incluir *</label><input type="number" name="num_familiares" placeholder="Ej. 4" required /></div><div><label>Edades de los integrantes *</label><input type="text" name="edades" placeholder="Ej. 65, 60, 34 y 8 años" required /></div>
+              <input type="hidden" name="ramo" value="Exequias" />
+            </div>
+            <button class="btn btn-lime" type="submit">Solicitar cotización →</button>
+            <p class="form-note">🔒 Tus datos están protegidos. Solo los usamos para contactarte.</p>
+            <div class="form-msg"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="ramo-panel" id="panel-educacion" hidden>
+      <div class="ramo-detail-grid">
+        <div class="ramo-info">
+          <h3>🎓 Educación</h3>
+          <p class="d-intro">Seguro educativo que combina ahorro programado con protección: si el tomador fallece o queda inválido, la aseguradora asume el pago del plan y la educación de tus hijos queda garantizada.</p>
           <h4>✅ ¿Qué cubre normalmente?</h4>
-          <ul><li>Matrícula universitaria garantizada (semestres contratados)</li><li>Continuidad del plan si el padre/tomador fallece o se invalida</li><li>Rendimientos del ahorro y protección contra la inflación educativa</li><li>Libertad de elegir universidad en Colombia y en algunos planes, en el exterior</li></ul>
+          <ul><li>Matrícula universitaria garantizada (semestres contratados)</li><li>Continuidad del plan si el tomador fallece o se invalida</li><li>Rendimientos del ahorro y protección contra la inflación educativa</li><li>Libertad de elegir universidad</li></ul>
           <h4>⚠️ Exclusiones frecuentes</h4>
           <ul><li>Posgrados (salvo planes específicos)</li><li>Gastos de sostenimiento no pactados</li></ul>
           <h4>📋 Lo que necesitas para cotizar</h4>
-          <ul><li>Edad del niño y edad del tomador</li><li>Número de semestres a garantizar</li><li>Capacidad de ahorro mensual</li></ul>
+          <ul><li>Edad del niño y del tomador</li><li>Número de semestres a garantizar</li><li>Capacidad de ahorro mensual</li></ul>
+          <p class="d-nota">* Las coberturas y exclusiones exactas varían según la aseguradora y el plan. Tu asesor te explica las condiciones completas antes de contratar.</p>
         </div>
-      </details>
-      <details>
-        <summary>🧓 Pensiones y rentas vitalicias</summary>
-        <div class="d-body">
-          <p>Productos que convierten tu ahorro en un ingreso garantizado para tu retiro. La renta vitalicia te paga una mesada de por vida según la modalidad autorizada por la ley colombiana; ideal para quienes buscan estabilidad en su vejez.</p>
+        <div class="form-card">
+          <h3>Cotiza tu seguro de Educación</h3>
+          <p class="sub">Solo los datos necesarios para este seguro. Te respondemos en menos de 24h.</p>
+          <form data-tipo="Seguros de Personas">
+            <div class="form-grid">
+              <div class="full"><label>Nombre completo *</label><input type="text" name="nombre" placeholder="Tu nombre y apellido" required /></div><div><label>Celular / WhatsApp *</label><input type="tel" name="telefono" placeholder="300 000 0000" required /></div><div><label>Correo electrónico *</label><input type="email" name="email" placeholder="tucorreo@mail.com" required /></div><div class="full"><label>Ciudad *</label><input type="text" name="ciudad" placeholder="Ej. Bogotá" required /></div><div><label>Edad de tu hijo(a) *</label><input type="number" name="edad_hijo" placeholder="Ej. 3" required /></div><div><label>Semestres a garantizar *</label><select name="semestres" required><option value="" disabled selected>Selecciona una opción</option><option>10 semestres</option><option>8 semestres</option><option>12 semestres</option><option>No lo sé aún</option></select></div><div class="full"><label>Ahorro mensual posible *</label><select name="ahorro_mensual" required><option value="" disabled selected>Selecciona una opción</option><option>$200.000–$400.000</option><option>$400.000–$800.000</option><option>Más de $800.000</option></select></div>
+              <input type="hidden" name="ramo" value="Educación" />
+            </div>
+            <button class="btn btn-lime" type="submit">Solicitar cotización →</button>
+            <p class="form-note">🔒 Tus datos están protegidos. Solo los usamos para contactarte.</p>
+            <div class="form-msg"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="ramo-panel" id="panel-pensiones" hidden>
+      <div class="ramo-detail-grid">
+        <div class="ramo-info">
+          <h3>🧓 Pensiones y rentas vitalicias</h3>
+          <p class="d-intro">Productos que convierten tu ahorro en un ingreso garantizado para tu retiro. La renta vitalicia te paga una mesada de por vida según la modalidad autorizada por la ley colombiana.</p>
           <h4>✅ ¿Qué cubre normalmente?</h4>
-          <ul><li>Mesada garantizada de por vida (renta vitalicia)</li><li>Ajuste anual de la mesada según inflación</li><li>Beneficiarios de ley protegidos (sobrevivencia)</li><li>Complemento a la pensión obligatoria</li></ul>
+          <ul><li>Mesada garantizada de por vida (renta vitalicia)</li><li>Ajuste anual según inflación</li><li>Beneficiarios de ley protegidos (sobrevivencia)</li><li>Complemento a la pensión obligatoria</li></ul>
           <h4>⚠️ Exclusiones frecuentes</h4>
-          <ul><li>Retiros anticipados del capital una vez constituida la renta</li><li>Modalidades no autorizadas por la regulación vigente</li></ul>
+          <ul><li>Retiros anticipados del capital una vez constituida la renta</li><li>Modalidades no autorizadas por la regulación</li></ul>
           <h4>📋 Lo que necesitas para cotizar</h4>
-          <ul><li>Edad y capital disponible o ahorro mensual posible</li><li>Edad a la que deseas pensionarte</li><li>Beneficiarios</li></ul>
+          <ul><li>Edad y capital disponible o ahorro mensual</li><li>Edad a la que deseas pensionarte</li><li>Beneficiarios</li></ul>
+          <p class="d-nota">* Las coberturas y exclusiones exactas varían según la aseguradora y el plan. Tu asesor te explica las condiciones completas antes de contratar.</p>
         </div>
-      </details>
-      <details>
-        <summary>⛑️ ARL (empresarial)</summary>
-        <div class="d-body">
-          <p>Seguro obligatorio de riesgos laborales para empresas: cubre a los trabajadores frente a accidentes de trabajo y enfermedades laborales. Como agencia te ayudamos con la afiliación, clasificación de riesgo y gestión ante la ARL.</p>
+        <div class="form-card">
+          <h3>Cotiza tu seguro de Pensiones y rentas vitalicias</h3>
+          <p class="sub">Solo los datos necesarios para este seguro. Te respondemos en menos de 24h.</p>
+          <form data-tipo="Seguros de Personas">
+            <div class="form-grid">
+              <div class="full"><label>Nombre completo *</label><input type="text" name="nombre" placeholder="Tu nombre y apellido" required /></div><div><label>Celular / WhatsApp *</label><input type="tel" name="telefono" placeholder="300 000 0000" required /></div><div><label>Correo electrónico *</label><input type="email" name="email" placeholder="tucorreo@mail.com" required /></div><div class="full"><label>Ciudad *</label><input type="text" name="ciudad" placeholder="Ej. Bogotá" required /></div><div><label>Edad actual *</label><input type="number" name="edad" placeholder="Ej. 45" required /></div><div><label>¿A qué edad quieres retirarte? *</label><input type="number" name="edad_retiro" placeholder="Ej. 62" required /></div><div class="full"><label>Aporte mensual posible *</label><select name="aporte" required><option value="" disabled selected>Selecciona una opción</option><option>$300.000–$600.000</option><option>$600.000–$1.500.000</option><option>Más de $1.500.000</option><option>Tengo un capital para invertir</option></select></div>
+              <input type="hidden" name="ramo" value="Pensiones y rentas vitalicias" />
+            </div>
+            <button class="btn btn-lime" type="submit">Solicitar cotización →</button>
+            <p class="form-note">🔒 Tus datos están protegidos. Solo los usamos para contactarte.</p>
+            <div class="form-msg"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="ramo-panel" id="panel-arl" hidden>
+      <div class="ramo-detail-grid">
+        <div class="ramo-info">
+          <h3>⛑️ ARL (empresarial)</h3>
+          <p class="d-intro">Seguro obligatorio de riesgos laborales para empresas: cubre a los trabajadores frente a accidentes de trabajo y enfermedades laborales. Te ayudamos con la afiliación, clasificación de riesgo y gestión.</p>
           <h4>✅ ¿Qué cubre normalmente?</h4>
-          <ul><li>Accidentes de trabajo y enfermedad laboral</li><li>Incapacidades, indemnizaciones y pensiones de invalidez laboral</li><li>Actividades de promoción y prevención en la empresa</li><li>Cobertura de trabajadores dependientes e independientes</li></ul>
+          <ul><li>Accidentes de trabajo y enfermedad laboral</li><li>Incapacidades, indemnizaciones y pensiones de invalidez laboral</li><li>Promoción y prevención en la empresa</li><li>Trabajadores dependientes e independientes</li></ul>
           <h4>⚠️ Exclusiones frecuentes</h4>
-          <ul><li>Accidentes fuera del ámbito laboral (para eso están los seguros de accidentes personales)</li><li>Trabajadores no afiliados o mal clasificados</li></ul>
+          <ul><li>Accidentes fuera del ámbito laboral</li><li>Trabajadores no afiliados o mal clasificados</li></ul>
           <h4>📋 Lo que necesitas para cotizar</h4>
-          <ul><li>Actividad económica de la empresa (define la clase de riesgo I a V)</li><li>Número de trabajadores y nómina</li><li>Tipo de vinculación de los trabajadores</li></ul>
+          <ul><li>Actividad económica (define la clase de riesgo I a V)</li><li>Número de trabajadores y nómina</li><li>Tipo de vinculación</li></ul>
+          <p class="d-nota">* Las coberturas y exclusiones exactas varían según la aseguradora y el plan. Tu asesor te explica las condiciones completas antes de contratar.</p>
         </div>
-      </details>
-      <details>
-        <summary>✈️ Asistencia en viajes</summary>
-        <div class="d-body">
-          <p>Con Terrawin y Assist Card: cobertura médica y asistencia completa cuando viajas por Colombia o el mundo. Es requisito para visa Schengen y la diferencia entre un susto y una deuda de miles de dólares por una urgencia en el exterior.</p>
+        <div class="form-card">
+          <h3>Cotiza tu seguro de ARL (empresarial)</h3>
+          <p class="sub">Solo los datos necesarios para este seguro. Te respondemos en menos de 24h.</p>
+          <form data-tipo="Seguros de Personas">
+            <div class="form-grid">
+              <div class="full"><label>Nombre completo *</label><input type="text" name="nombre" placeholder="Tu nombre y apellido" required /></div><div><label>Celular / WhatsApp *</label><input type="tel" name="telefono" placeholder="300 000 0000" required /></div><div><label>Correo electrónico *</label><input type="email" name="email" placeholder="tucorreo@mail.com" required /></div><div class="full"><label>Ciudad *</label><input type="text" name="ciudad" placeholder="Ej. Bogotá" required /></div><div><label>Nombre de la empresa *</label><input type="text" name="empresa" placeholder="Ej. Constructora ABC" required /></div><div><label>Número de trabajadores *</label><input type="number" name="num_trabajadores" placeholder="Ej. 12" required /></div><div class="full"><label>Actividad económica *</label><input type="text" name="actividad" placeholder="Ej. Construcción" required /></div>
+              <input type="hidden" name="ramo" value="ARL (empresarial)" />
+            </div>
+            <button class="btn btn-lime" type="submit">Solicitar cotización →</button>
+            <p class="form-note">🔒 Tus datos están protegidos. Solo los usamos para contactarte.</p>
+            <div class="form-msg"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="ramo-panel" id="panel-viajes" hidden>
+      <div class="ramo-detail-grid">
+        <div class="ramo-info">
+          <h3>✈️ Asistencia en viajes</h3>
+          <p class="d-intro">Con Terrawin y Assist Card: cobertura médica y asistencia completa cuando viajas por Colombia o el mundo. Es requisito para visa Schengen y la diferencia entre un susto y una deuda enorme en el exterior.</p>
           <h4>✅ ¿Qué cubre normalmente?</h4>
           <ul><li>Asistencia médica por enfermedad o accidente en el exterior</li><li>Medicamentos, hospitalización y odontología de urgencia</li><li>Cancelación e interrupción de viaje (según plan)</li><li>Pérdida de equipaje y demoras de vuelo</li><li>Repatriación sanitaria</li></ul>
           <h4>⚠️ Exclusiones frecuentes</h4>
-          <ul><li>Enfermedades preexistentes (salvo planes con cobertura específica)</li><li>Deportes extremos sin cobertura adicional</li><li>Viajes iniciados sin haber contratado la asistencia</li></ul>
+          <ul><li>Enfermedades preexistentes (salvo planes específicos)</li><li>Deportes extremos sin cobertura adicional</li><li>Viajes iniciados sin haber contratado la asistencia</li></ul>
           <h4>📋 Lo que necesitas para cotizar</h4>
           <ul><li>Destino y fechas del viaje</li><li>Edad de los viajeros</li><li>Tipo de viaje (turismo, negocios, estudio)</li></ul>
+          <p class="d-nota">* Las coberturas y exclusiones exactas varían según la aseguradora y el plan. Tu asesor te explica las condiciones completas antes de contratar.</p>
         </div>
-      </details>
-    <p style="font-size:.8rem;color:var(--gray);margin-top:18px;text-align:center">* Las coberturas, exclusiones y deducibles exactos varían según la aseguradora y el plan. Antes de contratar, tu asesor Gestionar te explica las condiciones completas de cada opción.</p>
+        <div class="form-card">
+          <h3>Cotiza tu seguro de Asistencia en viajes</h3>
+          <p class="sub">Solo los datos necesarios para este seguro. Te respondemos en menos de 24h.</p>
+          <form data-tipo="Seguros de Personas">
+            <div class="form-grid">
+              <div class="full"><label>Nombre completo *</label><input type="text" name="nombre" placeholder="Tu nombre y apellido" required /></div><div><label>Celular / WhatsApp *</label><input type="tel" name="telefono" placeholder="300 000 0000" required /></div><div><label>Correo electrónico *</label><input type="email" name="email" placeholder="tucorreo@mail.com" required /></div><div class="full"><label>Ciudad *</label><input type="text" name="ciudad" placeholder="Ej. Bogotá" required /></div><div><label>Destino del viaje *</label><input type="text" name="destino" placeholder="Ej. España" required /></div><div><label>Fechas del viaje *</label><input type="text" name="fechas" placeholder="Ej. 10 al 25 de agosto" required /></div><div class="full"><label>Número de viajeros *</label><input type="number" name="num_viajeros" placeholder="Ej. 2" required /></div>
+              <input type="hidden" name="ramo" value="Asistencia en viajes" />
+            </div>
+            <button class="btn btn-lime" type="submit">Solicitar cotización →</button>
+            <p class="form-note">🔒 Tus datos están protegidos. Solo los usamos para contactarte.</p>
+            <div class="form-msg"></div>
+          </form>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -320,5 +470,20 @@
 </a>
 
 <script src="app.js"></script>
+<script>
+document.querySelectorAll('.ramo-btn').forEach(function(b){
+  b.addEventListener('click', function(){
+    var open = b.classList.contains('active');
+    document.querySelectorAll('.ramo-btn').forEach(function(x){x.classList.remove('active')});
+    document.querySelectorAll('.ramo-panel').forEach(function(p){p.hidden=true});
+    if(!open){
+      b.classList.add('active');
+      var p = document.getElementById('panel-'+b.dataset.ramo);
+      p.hidden = false;
+      setTimeout(function(){p.scrollIntoView({behavior:'smooth', block:'start'});}, 60);
+    }
+  });
+});
+</script>
 </body>
 </html>

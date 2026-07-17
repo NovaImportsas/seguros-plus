@@ -26,8 +26,8 @@ function doPost(e) {
     'Seguro de Vida':        ['fecha', 'nombre', 'telefono', 'email', 'edad', 'ciudad', 'interes'],
     'Seguro de Autos':       ['fecha', 'nombre', 'telefono', 'placa', 'marca', 'modelo', 'ciudad'],
     'Seguro Todo Riesgo':    ['fecha', 'nombre', 'telefono', 'email', 'bien', 'ciudad'],
-    'Seguros de Personas':   ['fecha', 'nombre', 'telefono', 'email', 'ciudad', 'ramo'],
-    'Seguros de Daños':      ['fecha', 'nombre', 'telefono', 'email', 'ciudad', 'ramo', 'perfil'],
+    'Seguros de Personas':   ['fecha', 'nombre', 'telefono', 'email', 'ciudad', 'ramo', 'detalle'],
+    'Seguros de Daños':      ['fecha', 'nombre', 'telefono', 'email', 'ciudad', 'ramo', 'perfil', 'detalle'],
     'Landing Seguros de Personas': ['fecha', 'nombre', 'telefono', 'email', 'ciudad', 'ramo', 'fuente'],
     'Landing Seguros de Daños':    ['fecha', 'nombre', 'telefono', 'email', 'ciudad', 'ramo', 'perfil', 'fuente']
   };

@@ -27,6 +27,14 @@ document.querySelectorAll('form[data-tipo]').forEach(form => {
     const data = { tipo: form.dataset.tipo, fecha: new Date().toLocaleString('es-CO') };
     new FormData(form).forEach((v, k) => data[k] = v);
 
+    // Agrupa campos especificos del ramo en una sola columna 'detalle'
+    const base = ['tipo','fecha','nombre','telefono','email','ciudad','ramo','perfil','fuente','detalle'];
+    const extras = Object.keys(data).filter(k => !base.includes(k) && data[k]);
+    if (extras.length) {
+      data.detalle = extras.map(k => k.replace(/_/g,' ') + ': ' + data[k]).join(' | ');
+      extras.forEach(k => delete data[k]);
+    }
+
     try {
       if (SHEETS_URL.startsWith('http')) {
         await fetch(SHEETS_URL, {
