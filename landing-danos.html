@@ -16,31 +16,81 @@
   .lp-header nav{height:66px}
   .lp-phone{display:inline-flex;align-items:center;gap:8px;color:var(--white);font-weight:700;font-size:.92rem}
   .lp-phone:hover{color:var(--lime)}
-  .lp-hero{background:radial-gradient(1100px 560px at 78% -10%, #1d4433 0%, var(--dark) 58%);color:var(--white);padding:56px 0 70px}
-  .lp-hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:50px;align-items:start}
-  .lp-hero h1{font-size:clamp(2rem,4.4vw,3.1rem);font-weight:800;line-height:1.12;letter-spacing:-.02em}
+
+  .lp-hero{background:linear-gradient(178deg,#0b1f17 0%,#143426 45%,#2a5a42 78%,#eef2e6 100%);color:var(--white);padding:60px 0 90px;position:relative;overflow:hidden}
+  .lp-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(700px 400px at 85% 0%,rgba(201,242,75,.14),transparent 65%);pointer-events:none}
+  .lp-hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:54px;align-items:start;position:relative;z-index:1}
+  .lp-hero h1{font-size:clamp(2.2rem,4.8vw,3.4rem);font-weight:800;line-height:1.1;letter-spacing:-.02em}
   .lp-hero h1 em{font-style:normal;color:var(--lime)}
-  .lp-hero .lead{margin:18px 0 24px;color:rgba(255,255,255,.72);font-size:1.05rem;max-width:520px}
-  .lp-points{list-style:none;display:grid;gap:12px;margin-bottom:26px}
-  .lp-points li{display:flex;gap:10px;align-items:flex-start;font-size:.95rem;color:rgba(255,255,255,.85)}
-  .lp-points .check{flex:none;width:22px;height:22px;border-radius:7px;background:var(--lime);color:var(--dark);display:inline-flex;align-items:center;justify-content:center;font-weight:800;font-size:.75rem;margin-top:2px}
-  .lp-trust{display:flex;gap:20px;flex-wrap:wrap;margin-top:6px}
-  .lp-trust span{font-size:.8rem;color:rgba(255,255,255,.55);display:inline-flex;align-items:center;gap:6px}
-  .lp-hero .form-card{color:var(--dark)}
+  .lp-hero .lead{margin:18px 0 22px;color:rgba(255,255,255,.75);font-size:1.06rem;max-width:520px}
+
+  .rating-row{display:flex;align-items:center;gap:16px;margin:20px 0 6px;flex-wrap:wrap}
+  .avatars{display:flex}
+  .avatars img{width:42px;height:42px;border-radius:50%;border:2.5px solid #16352a;object-fit:cover;margin-left:-10px}
+  .avatars img:first-child{margin-left:0}
+  .rating-row .stars{color:#ffd23e;font-size:1rem;letter-spacing:2px}
+  .rating-row b{font-size:1.2rem}
+  .rating-row small{display:block;font-size:.78rem;color:rgba(255,255,255,.6)}
+
+  .cta-row{display:flex;gap:14px;align-items:center;margin:24px 0 4px;flex-wrap:wrap}
+  .btn-mega{font-size:1.02rem;padding:17px 32px;box-shadow:0 14px 40px rgba(201,242,75,.4);animation:ctapulse 2.4s infinite}
+  @keyframes ctapulse{0%{box-shadow:0 0 0 0 rgba(201,242,75,.45)}70%{box-shadow:0 0 0 18px rgba(201,242,75,0)}100%{box-shadow:0 0 0 0 rgba(201,242,75,0)}}
+  .btn-wa{display:inline-flex;align-items:center;gap:10px;color:var(--white);font-weight:700;font-size:.95rem}
+  .btn-wa .circle{width:52px;height:52px;border-radius:50%;background:#25d366;display:inline-flex;align-items:center;justify-content:center;box-shadow:0 10px 26px rgba(37,211,102,.4)}
+  .btn-wa svg{width:26px;height:26px;fill:#fff}
+  .btn-wa:hover .circle{transform:scale(1.08)}
+
+  .lp-trust{display:flex;gap:20px;flex-wrap:wrap;margin-top:20px}
+  .lp-trust span{font-size:.8rem;color:rgba(255,255,255,.6);display:inline-flex;align-items:center;gap:6px}
+
+  .form-wrap{position:relative}
+  .form-badge{position:absolute;top:-16px;right:22px;z-index:2;background:var(--lime);color:var(--dark);font-weight:800;font-size:.8rem;padding:9px 18px;border-radius:999px;box-shadow:0 10px 26px rgba(0,0,0,.25);transform:rotate(3deg)}
+  .lp-hero .form-card{color:var(--dark);border:none;box-shadow:0 34px 90px rgba(0,0,0,.45);border-top:5px solid var(--lime)}
   .lp-hero .form-card label{color:var(--dark)}
+  .lp-hero .form-card h3{font-size:1.35rem}
   .consent{display:flex;gap:10px;align-items:flex-start;margin-top:14px;font-size:.72rem;color:var(--gray);line-height:1.5}
   .consent input{width:auto;margin-top:2px;accent-color:#7da51f}
+
+  .lp-band{margin-top:-46px;position:relative;z-index:2}
+  .band-grid{display:grid;grid-template-columns:1.1fr 2fr;gap:22px}
+  .photo-card{position:relative;border-radius:24px;overflow:hidden;min-height:250px;box-shadow:0 20px 50px rgba(11,31,23,.25)}
+  .photo-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .photo-card .overlay{position:absolute;inset:auto 0 0 0;padding:22px;background:linear-gradient(transparent,rgba(11,31,23,.92));color:var(--white)}
+  .photo-card .overlay b{font-size:1.1rem}
+  .photo-card .overlay a{display:inline-flex;margin-top:8px;color:var(--lime);font-weight:700;font-size:.85rem}
+  .band-cards{background:linear-gradient(150deg,#10291e,#16352a);border:1px solid var(--stroke);border-radius:24px;padding:30px;display:grid;grid-template-columns:repeat(3,1fr);gap:24px;box-shadow:0 20px 50px rgba(11,31,23,.25)}
+  .band-item .ico{width:52px;height:52px;border-radius:50%;background:rgba(201,242,75,.16);border:1.5px solid rgba(201,242,75,.5);display:flex;align-items:center;justify-content:center;font-size:1.4rem;margin-bottom:14px}
+  .band-item h3{color:var(--white);font-size:1.02rem;margin-bottom:6px}
+  .band-item p{color:rgba(255,255,255,.6);font-size:.85rem}
+
+  .stats-row{display:grid;grid-template-columns:repeat(4,1fr);gap:26px;padding:64px 0 10px}
+  .stat-big{border-top:4px solid var(--lime);padding-top:16px}
+  .stat-big b{font-size:2.6rem;font-weight:800;color:var(--dark)}
+  .stat-big b em{font-style:normal;color:#7da51f}
+  .stat-big span{display:block;color:var(--gray);font-size:.88rem;margin-top:4px}
+
+  .step-card{background:var(--white);border:1px solid #e7ebe2;border-radius:24px;overflow:hidden;box-shadow:0 14px 40px rgba(11,31,23,.07)}
+  .step-card img{width:100%;height:190px;object-fit:cover}
+  .step-card .body{padding:22px 24px}
+  .step-card .num{display:inline-block;background:var(--lime);color:var(--dark);font-weight:800;font-size:.78rem;border-radius:999px;padding:5px 14px;margin-bottom:10px}
+  .step-card h3{font-size:1.05rem;margin-bottom:6px}
+  .step-card p{color:var(--gray);font-size:.88rem}
+
   .faq details{background:var(--white);border:1px solid #e7ebe2;border-radius:16px;padding:18px 22px;margin-bottom:12px}
   .faq summary{font-weight:700;cursor:pointer;font-size:.98rem}
   .faq p{margin-top:10px;color:var(--gray);font-size:.92rem}
   .testimonial{background:var(--white);border:1px solid #e7ebe2;border-radius:var(--radius);padding:26px;box-shadow:0 10px 30px rgba(11,31,23,.05)}
   .testimonial .stars{color:#e8b90c;letter-spacing:2px;margin-bottom:10px}
   .testimonial p{font-size:.92rem;color:var(--gray);margin-bottom:14px}
-  .testimonial b{font-size:.9rem}
-  .testimonial span{display:block;font-size:.78rem;color:var(--gray)}
+  .t-person{display:flex;align-items:center;gap:12px}
+  .t-person img{width:44px;height:44px;border-radius:50%;object-fit:cover}
+  .t-person b{font-size:.9rem;display:block}
+  .t-person span{font-size:.78rem;color:var(--gray)}
   .sticky-cta{display:none}
   @media(max-width:900px){
-    .lp-hero-grid{grid-template-columns:1fr}
+    .lp-hero-grid,.band-grid{grid-template-columns:1fr}
+    .band-cards{grid-template-columns:1fr}
+    .stats-row{grid-template-columns:repeat(2,1fr)}
     .sticky-cta{display:flex;position:fixed;bottom:0;left:0;right:0;z-index:95;background:var(--dark);padding:12px 16px;gap:10px;border-top:1px solid var(--stroke)}
     .sticky-cta a{flex:1;justify-content:center;padding:13px}
     .wa-float{bottom:78px}
@@ -64,82 +114,119 @@
 <section class="lp-hero">
   <div class="container lp-hero-grid">
     <div>
-      <span class="pill">✦ Cotización gratuita · Respuesta en menos de 24h</span>
-      <h1>Tu carro, tu casa y tu negocio, <em>protegidos al mejor precio</em></h1>
-      <p class="lead">Cotizamos tu seguro de autos, hogar, todo riesgo, cumplimiento o responsabilidad civil con <b>más de 15 aseguradoras</b> (Sura, Bolívar, Mapfre, HDI y más) para conseguirte la mejor cobertura al mejor precio.</p>
-      <ul class="lp-points">
-        <li><span class="check">✓</span><span><b>Gratis y sin compromiso</b> — cotizar no te obliga a comprar.</span></li>
-        <li><span class="check">✓</span><span><b>Comparamos por ti</b> — una sola solicitud, todas las aseguradoras.</span></li>
-        <li><span class="check">✓</span><span><b>Acompañamiento en siniestros</b> — nunca peleas solo una reclamación.</span></li>
-      </ul>
+      <span class="pill">✦ Bienvenido a Gestionar · Agencia de Seguros</span>
+      <h1>Tu carro, tu casa y tu negocio <em>al mejor precio del mercado</em></h1>
+      <p class="lead">Cotizamos tu seguro de <b>autos, hogar, todo riesgo, cumplimiento o RC</b> con más de 15 aseguradoras (Sura, Bolívar, Mapfre, HDI y más) y te entregamos la mejor opción al mejor precio.</p>
+      <div class="rating-row">
+        <div class="avatars">
+          <img src="https://randomuser.me/api/portraits/men/22.jpg" alt="Cliente" />
+          <img src="https://randomuser.me/api/portraits/women/33.jpg" alt="Cliente" />
+          <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Cliente" />
+          <img src="https://randomuser.me/api/portraits/women/56.jpg" alt="Cliente" />
+        </div>
+        <div>
+          <span class="stars">★★★★★</span> <b>4.9/5</b>
+          <small>+500 clientes protegidos nos recomiendan</small>
+        </div>
+      </div>
+      <div class="cta-row">
+        <a class="btn btn-lime btn-mega" href="#cotizar">🚀 Cotizar gratis ahora →</a>
+        <a class="btn-wa" href="https://wa.me/573174273388?text=Hola%2C%20quiero%20cotizar%20un%20seguro%20de%20da%C3%B1os" target="_blank" rel="noopener">
+          <span class="circle"><svg viewBox="0 0 32 32"><path d="M16 3C9.4 3 4 8.4 4 15c0 2.1.6 4.2 1.6 6L4 29l8.2-1.5c1.7.9 3.6 1.4 5.8 1.4 6.6 0 12-5.4 12-12S22.6 3 16 3z"/></svg></span>
+          WhatsApp directo
+        </a>
+      </div>
       <div class="lp-trust">
         <span>🔒 Datos protegidos</span>
         <span>🏆 +15 aseguradoras aliadas</span>
-        <span>⚡ Respuesta el mismo día</span>
+        <span>⚡ Respuesta en menos de 24h</span>
+        <span>💯 Sin compromiso</span>
       </div>
     </div>
-    <div class="form-card" id="cotizar">
-      <h3>Recibe tu cotización gratis</h3>
-      <p class="sub">Déjanos tus datos y un asesor te contacta hoy mismo.</p>
-      <form data-tipo="Landing Seguros de Daños">
-        <div class="form-grid">
-          <div class="full"><label>Nombre completo *</label><input type="text" name="nombre" placeholder="Ej. Carlos Gómez" required /></div>
-          <div><label>Celular / WhatsApp *</label><input type="tel" name="telefono" placeholder="300 000 0000" required /></div>
-          <div><label>Correo electrónico *</label><input type="email" name="email" placeholder="tucorreo@mail.com" required /></div>
-          <div><label>Ciudad *</label><input type="text" name="ciudad" placeholder="Ej. Medellín" required /></div>
-          <div><label>¿Qué quieres proteger? *</label>
-            <select name="ramo" required>
-              <option value="" disabled selected>Selecciona una opción</option>
-              <option>Mi vehículo (autos)</option>
-              <option>Mi hogar / apartamento</option>
-              <option>Mi empresa o negocio (todo riesgo)</option>
-              <option>Cumplimiento (contratos)</option>
-              <option>Responsabilidad civil</option>
-              <option>Transporte de mercancías</option>
-              <option>Maquinaria / ingeniería</option>
-              <option>Otro</option>
-            </select>
+    <div class="form-wrap">
+      <div class="form-badge">100% GRATIS</div>
+      <div class="form-card" id="cotizar">
+        <h3>Recibe tu cotización gratis</h3>
+        <p class="sub">Te toma 1 minuto. Un asesor te contacta hoy mismo.</p>
+        <form data-tipo="Landing Seguros de Daños">
+          <div class="form-grid">
+            <div class="full"><label>Nombre completo *</label><input type="text" name="nombre" placeholder="Ej. Carlos Gómez" required /></div>
+            <div><label>Celular / WhatsApp *</label><input type="tel" name="telefono" placeholder="300 000 0000" required /></div>
+            <div><label>Correo electrónico *</label><input type="email" name="email" placeholder="tucorreo@mail.com" required /></div>
+            <div><label>Ciudad *</label><input type="text" name="ciudad" placeholder="Ej. Medellín" required /></div>
+            <div><label>¿Qué quieres proteger? *</label>
+              <select name="ramo" required>
+                <option value="" disabled selected>Selecciona una opción</option>
+                <option>Mi vehículo (autos)</option>
+                <option>Mi hogar / apartamento</option>
+                <option>Mi empresa o negocio (todo riesgo)</option>
+                <option>Cumplimiento (contratos)</option>
+                <option>Responsabilidad civil</option>
+                <option>Transporte de mercancías</option>
+                <option>Maquinaria / ingeniería</option>
+                <option>Otro</option>
+              </select>
+            </div>
+            <div class="full"><label>¿El seguro es para...? *</label>
+              <select name="perfil" required>
+                <option value="" disabled selected>Selecciona una opción</option>
+                <option>Persona natural</option>
+                <option>Empresa / Negocio</option>
+              </select>
+            </div>
+            <input type="hidden" name="fuente" value="" />
           </div>
-          <div class="full"><label>¿El seguro es para...? *</label>
-            <select name="perfil" required>
-              <option value="" disabled selected>Selecciona una opción</option>
-              <option>Persona natural</option>
-              <option>Empresa / Negocio</option>
-            </select>
-          </div>
-          <input type="hidden" name="fuente" value="" />
-        </div>
-        <button class="btn btn-lime" type="submit">Quiero mi cotización gratis →</button>
-        <label class="consent"><input type="checkbox" required />Autorizo el tratamiento de mis datos personales para recibir información y cotizaciones de seguros, de acuerdo con la Ley 1581 de 2012 (Habeas Data).</label>
-        <div class="form-msg"></div>
-      </form>
+          <button class="btn btn-lime btn-mega" type="submit" style="width:100%;justify-content:center">Quiero mi cotización gratis →</button>
+          <label class="consent"><input type="checkbox" required />Autorizo el tratamiento de mis datos personales para recibir información y cotizaciones de seguros, de acuerdo con la Ley 1581 de 2012 (Habeas Data).</label>
+          <div class="form-msg"></div>
+        </form>
+      </div>
     </div>
   </div>
 </section>
 
-<div class="trust">
-  <div class="container">
-    <span>Sura</span><span class="dot"></span>
-    <span>Bolívar</span><span class="dot"></span>
-    <span>Mapfre</span><span class="dot"></span>
-    <span>HDI</span><span class="dot"></span>
-    <span>Estado</span><span class="dot"></span>
-    <span>Qualitas</span><span class="dot"></span>
-    <span>Previsora</span><span class="dot"></span>
-    <span>+ 8 aseguradoras más</span>
+<section class="lp-band">
+  <div class="container band-grid">
+    <div class="photo-card">
+      <img src="https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?auto=format&fit=crop&w=900&q=70" alt="Vehículo protegido" />
+      <div class="overlay"><b>¿Cómo funciona?</b><br/><a href="#como">Conócelo en 3 pasos →</a></div>
+    </div>
+    <div class="band-cards">
+      <div class="band-item"><div class="ico">🚗</div><h3>Autos</h3><p>Pérdida total y parcial, hurto, RC y asistencia en vía 24/7 en todo el país.</p></div>
+      <div class="band-item"><div class="ico">🏠</div><h3>Hogar y Todo Riesgo</h3><p>Incendio, terremoto, daños por agua, sustracción y responsabilidad civil.</p></div>
+      <div class="band-item"><div class="ico">🏭</div><h3>Empresas</h3><p>Cumplimiento, transporte, maquinaria, lucro cesante y más ramos empresariales.</p></div>
+    </div>
   </div>
-</div>
+</section>
 
-<section class="section" style="padding:70px 0">
+<section class="section" style="padding:20px 0 40px">
+  <div class="container stats-row">
+    <div class="stat-big"><b>15<em>+</em></b><span>Aseguradoras aliadas comparadas por ti</span></div>
+    <div class="stat-big"><b>500<em>+</em></b><span>Familias y empresas ya protegidas</span></div>
+    <div class="stat-big"><b>24<em>h</em></b><span>Tiempo máximo de respuesta</span></div>
+    <div class="stat-big"><b>25<em>%</em></b><span>Ahorro promedio al comparar con nosotros</span></div>
+  </div>
+</section>
+
+<section class="section" style="padding:40px 0 70px" id="como">
   <div class="container">
     <div class="section-head center">
       <span class="tag">Así de fácil</span>
-      <h2>¿Cómo funciona?</h2>
+      <h2>Protege tu patrimonio en 3 pasos</h2>
     </div>
     <div class="coverage-grid">
-      <div class="coverage-card"><div class="emoji">1️⃣</div><h3>Completa el formulario</h3><p>Solo te toma 1 minuto. Sin papeleos ni letra pequeña.</p></div>
-      <div class="coverage-card"><div class="emoji">2️⃣</div><h3>Comparamos por ti</h3><p>Buscamos entre más de 15 aseguradoras la mejor cobertura al mejor precio.</p></div>
-      <div class="coverage-card"><div class="emoji">3️⃣</div><h3>Recibe tu cotización</h3><p>Un asesor te contacta en menos de 24 horas por WhatsApp o llamada.</p></div>
+      <div class="step-card">
+        <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=800&q=70" alt="Completa el formulario" />
+        <div class="body"><span class="num">PASO 1</span><h3>Completa el formulario</h3><p>Solo te toma 1 minuto. Sin papeleos ni letra pequeña.</p></div>
+      </div>
+      <div class="step-card">
+        <img src="https://images.unsplash.com/photo-1502877338535-766e1452684a?auto=format&fit=crop&w=800&q=70" alt="Comparamos aseguradoras" />
+        <div class="body"><span class="num">PASO 2</span><h3>Comparamos por ti</h3><p>Buscamos entre más de 15 aseguradoras la mejor cobertura al mejor precio.</p></div>
+      </div>
+      <div class="step-card">
+        <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=800&q=70" alt="Recibe tu cotización" />
+        <div class="body"><span class="num">PASO 3</span><h3>Recibe tu cotización</h3><p>Un asesor te contacta en menos de 24 horas por WhatsApp o llamada.</p></div>
+      </div>
     </div>
   </div>
 </section>
@@ -151,9 +238,9 @@
       <h2>Clientes que ya ahorran con nosotros</h2>
     </div>
     <div class="coverage-grid">
-      <div class="testimonial"><div class="stars">★★★★★</div><p>"Renovar el todo riesgo de mi carro me salía carísimo. Gestionar me cotizó con 4 aseguradoras y me ahorré casi el 25% con mejor cobertura."</p><b>Julián C.</b><span>Seguro de Autos · Bogotá</span></div>
-      <div class="testimonial"><div class="stars">★★★★★</div><p>"Necesitaba una póliza de cumplimiento urgente para un contrato con el Estado. Me la gestionaron en tiempo récord."</p><b>Marcela T.</b><span>Cumplimiento · Medellín</span></div>
-      <div class="testimonial"><div class="stars">★★★★★</div><p>"Aseguré la bodega y la mercancía de mi negocio. Me explicaron todo clarito y el acompañamiento en un siniestro fue excelente."</p><b>Óscar V.</b><span>Todo Riesgo Empresarial · Cali</span></div>
+      <div class="testimonial"><div class="stars">★★★★★</div><p>"Renovar el todo riesgo de mi carro me salía carísimo. Gestionar me cotizó con 4 aseguradoras y me ahorré casi el 25% con mejor cobertura."</p><div class="t-person"><img src="https://randomuser.me/api/portraits/men/36.jpg" alt="Julián C." /><div><b>Julián C.</b><span>Seguro de Autos · Bogotá</span></div></div></div>
+      <div class="testimonial"><div class="stars">★★★★★</div><p>"Necesitaba una póliza de cumplimiento urgente para un contrato con el Estado. Me la gestionaron en tiempo récord."</p><div class="t-person"><img src="https://randomuser.me/api/portraits/women/48.jpg" alt="Marcela T." /><div><b>Marcela T.</b><span>Cumplimiento · Medellín</span></div></div></div>
+      <div class="testimonial"><div class="stars">★★★★★</div><p>"Aseguré la bodega y la mercancía de mi negocio. Me explicaron todo clarito y el acompañamiento en un siniestro fue excelente."</p><div class="t-person"><img src="https://randomuser.me/api/portraits/men/58.jpg" alt="Óscar V." /><div><b>Óscar V.</b><span>Todo Riesgo Empresarial · Cali</span></div></div></div>
     </div>
   </div>
 </section>
@@ -175,8 +262,8 @@
 <section class="section" style="padding-top:0">
   <div class="container">
     <div class="cta-band">
-      <h2>No esperes a que pase el imprevisto. Cotiza gratis hoy.</h2>
-      <a class="btn btn-dark" href="#cotizar">Cotizar mi seguro →</a>
+      <h2>No esperes a que pase el imprevisto. Cotiza gratis hoy. ⏰</h2>
+      <a class="btn btn-dark btn-mega" href="#cotizar" style="animation:none">Cotizar mi seguro →</a>
     </div>
   </div>
 </section>
@@ -192,7 +279,7 @@
 </footer>
 
 <div class="sticky-cta">
-  <a class="btn btn-lime" href="#cotizar">Cotizar gratis</a>
+  <a class="btn btn-lime" href="#cotizar">🚀 Cotizar gratis</a>
 </div>
 
 <a class="wa-float" href="https://wa.me/573174273388?text=Hola%2C%20quiero%20cotizar%20un%20seguro%20de%20da%C3%B1os" target="_blank" rel="noopener" aria-label="Asesoría por WhatsApp">
